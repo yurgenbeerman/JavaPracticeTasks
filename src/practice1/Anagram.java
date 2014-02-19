@@ -22,7 +22,7 @@ import java.lang.String;
 
 public class Anagram {
 
-	static final boolean IS_TEST = true;
+	static final boolean IS_TEST = false;
 
 	public static void taskResult() {
 		System.out.println("--- Anagram ---");
@@ -55,45 +55,68 @@ public class Anagram {
 			
 			int lettersNum = stringA.length();
 			
-			//All next transformations consider both strings. I concatenate them. lettersNum helps to differ two strings.
-			stringA = (stringA + stringB).toLowerCase();
-			
-			//string2 = string2.toLowerCase();
-			
-			//array of chars
-			char[] charArr = new char[lettersNum * 2];
-			for (int i = 0; i < lettersNum * 2; i++)
-				charArr[i] = stringA.charAt(i);
+			//The next transformations consider both strings. I concatenate them. lettersNum helps to differ two strings.
+			stringA = stringA.toLowerCase();
+			stringB = stringB.toLowerCase();
 			
 			//array of ints
 			int[] intArr1 = new int[lettersNum];
 			int[] intArr2 = new int[lettersNum];
-			for(charArr: letter)
+			char letter = 'a';
+			for (int i = 0; i < lettersNum; i++) {
+				intArr1[i] = (int)stringA.charAt(i);
+				intArr2[i] = (int)stringB.charAt(i);
+			}
+			/*
+			for(char letter : charArr)
 				if (i < lettersNum) intArr1[i] = (int)letter;
 				else intArr2[i] = (int)letter;
-			
+			*/
 			//sorted int arrays
-			Arrays.sort(intArr1);
-			Arrays.sort(intArr2);
+			//Arrays.sort(intArr1); 			Arrays.sort(intArr2);
+			intArr1 = sortIntArray(intArr1);
+			intArr2 = sortIntArray(intArr2);
+			if (IS_TEST) {
+				System.out.println("intArr1 = " + Arrays.toString(intArr1));
+				System.out.println("intArr2 = " + Arrays.toString(intArr2));
+			}
 			
 			//compare sorted int arrays
 			boolean isDifferent = false;
 			for (int i = 0; i < lettersNum; i++)
-				if (intArr1[i] == intArr1(i)) {
+				if (intArr1[i] != intArr2[i]) {
 					isDifferent = true;
+					if (IS_TEST) System.out.println("Diffference at i = " + i);
 					break;
 				};
 			
 			result = !isDifferent;
-			
-			//System.out.println("AFTER SPACES REPLACING string1 = " + string1 + " string2 = " + string2);
-			//if (string1.equalsIgnoreCase(string2)) result = true;
-			//if (string1.equals(string2)) result = true;		
 		
 		} else System.out.println("These strings differ in number of letters");
 		
 		return result;
 	}	
+
+	static int[] sortIntArray(int[] array) {
+		//we will sort the copy of initial array
+		int[] arr = new int[array.length];
+		for (int i = array.length-1; i >= 0; i--) arr[i] = array[i];
+		
+		int maxIndex = arr.length-1;
+		for (int j = 0; j < maxIndex-1; j++) {
+			// 1. find MIN number
+			int minIndex = j;
+			for(int k = j+1; k <= maxIndex; k++) if (arr[k] <= arr[minIndex]) minIndex = k;
+			// 2. put MIN number in j place, and the j-element put to old place of the MIN number
+			if (arr[j]!=arr[minIndex]) { 
+			  int temp = arr[minIndex];
+			  arr[minIndex] = arr[j];
+			  arr[j] = temp;
+			}
+		}
+		//System.out.println("\nThe sorted array is:"); for (int elem : arr) System.out.print(elem + ", ");
+		return arr;
+    }
 	
 	static String inputString(Scanner in,  int num) {
 		String inputedValue = new String();
@@ -108,9 +131,9 @@ public class Anagram {
 	}
 
 	static void runTests() {
-		String string1 = "Desperation";
-		String string2 = "A Rope Ends It";
-		System.out.println("string1 = " + string1 + " string2 = " + string2);
+		String string1 = " Desperation ";
+		String string2 = " A Rope Ends It ";
+		System.out.println("string1 = " + string1 + ". string2 = " + string2 + ".");
 		if (areAnagrams(string1, string2)) System.out.println("These two strings are anagrams.");
 		else System.out.println("These two strings are NOT anagrams.");
 	}	
