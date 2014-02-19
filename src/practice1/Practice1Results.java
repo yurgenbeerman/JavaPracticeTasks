@@ -26,7 +26,7 @@ public class Practice1Results{
 		} else {
 			//in work tasks
 			
-			//CalendarSeeker.taskResult();
+			CalendarSeeker.taskResult();
 		}
 	}
 }
