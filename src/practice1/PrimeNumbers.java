@@ -27,7 +27,7 @@ public class PrimeNumbers {
 	public static void taskResult() {
 		System.out.println("--- PrimeNumbers ---");
 	
-		Integer num = inputNumber() ;
+		Integer num = inputNumber();
 		
 		if (num > 2) {
 			String resultStr = "[2";
