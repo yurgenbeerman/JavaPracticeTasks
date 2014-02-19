@@ -1,0 +1,2 @@
+E:\java_projects(Yura)\java_tasks\JavaPracticeTasks\class>java practice1.Practice1Results
+PrimeNumbers.main
