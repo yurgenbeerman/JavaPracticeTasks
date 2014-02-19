@@ -51,6 +51,7 @@ public class NeighbouringNumbers{
 		if (inputedValue.length() > 0) {
 		
 			inputedValue = inputedValue.trim();
+			//System.out.println("inputedValue=|" + inputedValue + "|");
 			
 			if (inputedValue.indexOf(" ") > 0) {
 			
@@ -85,10 +86,12 @@ public class NeighbouringNumbers{
 					}
 									
 					if (neighboursIndex-1 > 0) {
-						if (IS_TEST) System.out.println("         arrCopy = " + Arrays.toString(arrCopy));
-						if (IS_TEST) System.out.println("          Indexes = 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10");
-						if (IS_TEST) System.out.print("  numbersIndexes = "); printIntArr(numbersIndexes);//Arrays.toString(numbersIndexes));
-						if (IS_TEST) System.out.print("       distances = "); printIntArr(distances);//Arrays.toString(distances));
+						if (IS_TEST) {
+							System.out.println("         arrCopy = " + Arrays.toString(arrCopy));
+							System.out.println("          Indexes = 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10"); 
+							System.out.print("  numbersIndexes = "); printIntArr(numbersIndexes); //Arrays.toString(numbersIndexes)); 
+							System.out.print("       distances = "); printIntArr(distances); //Arrays.toString(distances)); 
+						}
 
 						//find the nearest neighbours						
 						int nearestIndex = 0;
@@ -145,7 +148,9 @@ public class NeighbouringNumbers{
 		return arr;
 	}
 	static void runTests() {
+
 		String testString = " 3 9 7 5 6 ";
+		/*
 		System.out.println("\nfindNearestNeigboursIndex for string: " + testString);
 		findNearestNeigboursIndex(testString);
 
@@ -162,6 +167,10 @@ public class NeighbouringNumbers{
 		findNearestNeigboursIndex(testString);
 
 		testString = " 1 2 1 2 1 2 1 2 1 2 1 ";
+		System.out.println("\nfindNearestNeigboursIndex for string: " + testString);
+		findNearestNeigboursIndex(testString);
+		*/
+		testString = "9 7 1 4 2 3  ";
 		System.out.println("\nfindNearestNeigboursIndex for string: " + testString);
 		findNearestNeigboursIndex(testString);
 		//System.out.println("Press ENTER to exit"); inputedValue = in.nextLine();
