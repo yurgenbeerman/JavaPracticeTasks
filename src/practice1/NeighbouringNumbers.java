@@ -134,7 +134,7 @@ public class NeighbouringNumbers{
 			if (spaceIndex>=0) numberStr = s.substring(currrentIndex, spaceIndex);
 			else numberStr = s.substring(currrentIndex, length);
 			
-			if (PrimeNumbers.isIntegerNumber(numberStr)) {
+			if (PrimeNumbers.isNotNegativeIntegerNumber(numberStr)) {
 				arr[arrIndex] = (Integer.valueOf(numberStr)).intValue();
 				arrIndex++;
 				currrentIndex = spaceIndex +1;

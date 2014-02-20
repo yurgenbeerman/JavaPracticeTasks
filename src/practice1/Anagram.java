@@ -22,7 +22,7 @@ import java.lang.String;
 
 public class Anagram {
 
-	static final boolean IS_TEST = true;
+	static final boolean IS_TEST = false;
 
 	public static void taskResult() {
 		System.out.println("\n--- Anagram ---");
@@ -98,21 +98,19 @@ public class Anagram {
 	}	
 
 	static int[] sortIntArray(int[] array) {
-		//we will sort the copy of initial array
+		//we will sort the copy of initial array, not to harm it in case of error while sorting
 		int[] arr = new int[array.length];
 		for (int i = array.length-1; i >= 0; i--) arr[i] = array[i];
-
-
-//BUG IS HERE
-		
-		int maxIndex = arr.length-1;
+	
+		int maxIndex = arr.length;
+		int temp = 0;
 		for (int j = 0; j < maxIndex-1; j++) {
-			// 1. find MIN number
+			// 1. find index of MIN number
 			int minIndex = j;
-			for(int k = j+1; k <= maxIndex; k++) if (arr[k] <= arr[minIndex]) minIndex = k;
+			for(int k = j+1; k < maxIndex; k++) if (arr[k] <= arr[minIndex]) minIndex = k;
 			// 2. put MIN number in j place, and the j-element put to old place of the MIN number
 			if (arr[j]!=arr[minIndex]) { 
-			  int temp = arr[minIndex];
+			  temp = arr[minIndex];
 			  arr[minIndex] = arr[j];
 			  arr[j] = temp;
 			}
@@ -134,28 +132,36 @@ public class Anagram {
 	}
 
 	static void runTests() {
+		/*
+	int[] arr = {110, 109, 106, 107, 55, 22, 56, 75, 3};
+	int[] arr1 = sortIntArray(arr);
+	System.out.println("arr = " + Arrays.toString(arr));
+	System.out.println("arr1 = " + Arrays.toString(arr1));
+		*/
+
 		String string1 = " Desperation ";
 		String string2 = " A Rope Ends It ";
-
+		System.out.println("string1 = " + string1 + ". string2 = " + string2 + ".");
+		if (areAnagrams(string1, string2)) System.out.println("These two strings are anagrams.");
+		else System.out.println("These two strings are NOT anagrams.\n");
+		
 		string1 = " wwnf ";
 		string2 = " fNww ";
-		
 		System.out.println("string1 = " + string1 + ". string2 = " + string2 + ".");
 		if (areAnagrams(string1, string2)) System.out.println("These two strings are anagrams.");
 		else System.out.println("These two strings are NOT anagrams.\n");
 		
 		string1 = " jnkm ";
 		string2 = " kmjn ";
-		
 		System.out.println("string1 = " + string1 + ". string2 = " + string2 + ".");
 		if (areAnagrams(string1, string2)) System.out.println("These two strings are anagrams.");
 		else System.out.println("These two strings are NOT anagrams.\n");
 		
 		string1 = " km ";
 		string2 = " mk ";
-		
 		System.out.println("string1 = " + string1 + ". string2 = " + string2 + ".");
 		if (areAnagrams(string1, string2)) System.out.println("These two strings are anagrams.");
 		else System.out.println("These two strings are NOT anagrams.");
+
 	}	
 }

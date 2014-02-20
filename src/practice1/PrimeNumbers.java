@@ -25,7 +25,7 @@ import java.util.*;
 public class PrimeNumbers {
 
 	public static void taskResult() {
-		System.out.println("--- PrimeNumbers ---");
+		System.out.println("\n--- PrimeNumbers ---");
 	
 		Integer num = inputNumber();
 		
@@ -52,14 +52,18 @@ public class PrimeNumbers {
 		}
 	}
 	
-	static void isIntegerNumberTests() {
-		System.out.println("isIntegerNumber 1" + isIntegerNumber("12q"));
-		System.out.println("isIntegerNumber 2" + isIntegerNumber("1.2"));
-		System.out.println("isIntegerNumber 3" + isIntegerNumber("1,2"));
-		System.out.println("isIntegerNumber 4" + isIntegerNumber("12"));
+	static void isNotNegativeIntegerNumberTests() {
+		System.out.println("isNotNegativeIntegerNumber 1" + isNotNegativeIntegerNumber("12q"));
+		System.out.println("isNotNegativeIntegerNumber 2" + isNotNegativeIntegerNumber("1.2"));
+		System.out.println("isNotNegativeIntegerNumber 3" + isNotNegativeIntegerNumber("1,2"));
+		System.out.println("isNotNegativeIntegerNumber 4" + isNotNegativeIntegerNumber("12"));
+		System.out.println("isNotNegativeIntegerNumber 4" + isNotNegativeIntegerNumber("000"));
+		System.out.println("isNotNegativeIntegerNumber 4" + isNotNegativeIntegerNumber("-0"));
+		System.out.println("isNotNegativeIntegerNumber 4" + isNotNegativeIntegerNumber(""));
+		System.out.println("isNotNegativeIntegerNumber 4" + isNotNegativeIntegerNumber(" "));
 	}
 	
-	public static boolean isIntegerNumber(String s) {
+	public static boolean isNotNegativeIntegerNumber(String s) {
 		boolean isDigit = false;
 
 		//go through all string symbols and check if they are digits
@@ -89,7 +93,7 @@ public class PrimeNumbers {
 		do {
 			System.out.println("Please enter a positive integer number: ");
 			inputedValue = in.nextLine();
-		} while (!isIntegerNumber(inputedValue));
+		} while (!isNotNegativeIntegerNumber(inputedValue));
 		
 		return Integer.valueOf(inputedValue);
 	}

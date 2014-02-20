@@ -19,11 +19,11 @@ public class Practice1Results{
 			//done tasks
 			PrimeNumbers.taskResult();
 			NeighbouringNumbers.taskResult();
+			Anagram.taskResult();
 
-			CalendarSeeker.taskResult();
 		} else {
 			//tasks in process
-			Anagram.taskResult();
+			CalendarSeeker.taskResult();
 		}
 	}
 }

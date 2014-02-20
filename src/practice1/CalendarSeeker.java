@@ -26,7 +26,7 @@ public class CalendarSeeker {
 	static final boolean IS_TEST = false;
 
 	public static void taskResult() {
-		System.out.println("--- CalendarSeeker ---");
+		System.out.println("n\--- CalendarSeeker ---");
 
 		if (!IS_TEST) {
 			MyDate date = inputDate();
@@ -37,14 +37,26 @@ public class CalendarSeeker {
 	}
 	
 	static class MyDate {
-		String day = "15";
-		String month = "October";
-		String year = "1582";
+		String day = "0";
+		String month = "0";
+		String year = "0";
 		DaysOfWeek dayOfWeek;
 		
 		public MyDate(String aday, String amonth, String ayear) {
 			day = aday;
 			month = amonth;
+			year = ayear;
+		}
+
+		public setDay(String aday) {
+			day = aday;
+		}
+
+		public setMonth(String amonth) {
+			month = amonth;
+		}
+		
+		public setYear(String ayear) {
 			year = ayear;
 		}
 		
@@ -54,9 +66,9 @@ public class CalendarSeeker {
 				+ ", month = "  + month
 				+ ", year = "  + year
 			);
-			int intDay = getIntDay();
-			int intMonth = getIntMonth();
-			int intYear = getIntYear();
+			int intYear = getIntYear(); //must be calculated FIRST!
+			int intDay = getIntDay(); //must be calculated SECOND! number of days in February depends on leap year
+			int intMonth = getIntMonth(); //must be calculated THIRD. It will check if day number is valid according to month. Number of days in February depends on leap year.
 			
 			if ( (intDay > 0) && (intMonth > 0) && (intYear > 0)) {
 				int a = (14 - intMonth) / 12;
@@ -81,16 +93,24 @@ public class CalendarSeeker {
 			} else System.out.println("Wrong data! Goodbye!");
 		}
 		
-		int getIntDay() {
-			if (PrimeNumbers.isIntegerNumber(day)) return (Integer.valueOf(day)).intValue();
+		int getIntYear() {  //must be calculated FIRST!
+			if (PrimeNumbers.isNotNegativeIntegerNumber(year)) return (Integer.valueOf(year)).intValue();
 			else return 0;
 		}
 		
-		int getIntMonth() {
+		int getIntDay() {  //must be calculated SECOND! 
+			int monthDayNumber = (Integer.valueOf(day)).intValue();
+			if ((PrimeNumbers.isNotNegativeIntegerNumber(day)) && (monthDayNumber < 32)) return monthDayNumber;
+			else return 0;
+		}
+		
+		int getIntMonth() { //must be calculated THIRD. It will check if day number is valid according to month. Number of days in February depends on leap year.
+			//we'll also check if the day number is valid
+			int maxDaysInMonth = 0;
 			int intMonth = 0;
-			if (month.equalsIgnoreCase("january")) intMonth = 1;
-			else if (month.equalsIgnoreCase("february")) intMonth = 2;
-			else if (month.equalsIgnoreCase("march")) intMonth = 3;
+			if (month.equalsIgnoreCase("january")) { intMonth = 1; maxDaysInMonth = 31;}
+			else if (month.equalsIgnoreCase("february")) {intMonth = 2; maxDaysInMonth = isLeapYer() ? 29 : 28;}
+			else if (month.equalsIgnoreCase("march")) intMonth = 3; //TODO HERE
 			else if (month.equalsIgnoreCase("april")) intMonth = 4;
 			else if (month.equalsIgnoreCase("may")) intMonth = 5;
 			else if (month.equalsIgnoreCase("june")) intMonth = 6;
@@ -99,16 +119,17 @@ public class CalendarSeeker {
 			else if (month.equalsIgnoreCase("september")) intMonth = 9;
 			else if (month.equalsIgnoreCase("october")) intMonth = 10;
 			else if (month.equalsIgnoreCase("november")) intMonth = 11;
-			else if (month.equalsIgnoreCase("december")) intMonth = 12;
+			else if (month.equalsIgnoreCase("december")) intMonth = 12; //TODO HERE
 			return intMonth;
 		}
-		
-		int getIntYear() {
-			if (PrimeNumbers.isIntegerNumber(year)) return (Integer.valueOf(year)).intValue();
-			else return 0;
-		}
 	}
-	
+
+	boolean isLeapYer(int year) {
+		boolean isLeap = false;
+		if ((year % 100 == 0) && if (year % 400 != 0)) isLeap = false;
+		else if (year % 4 != 0)	isLeap = true;
+		return isLeap;
+	}
 	enum DaysOfWeek {
 		SU("Sunday"),MO("Monday"),TU("Tuesday"),WE("Wednesday"),TH("Thursday"),FR("Friday"),SA("Saturday");
 		DaysOfWeek(String name) {
@@ -171,10 +192,30 @@ public class CalendarSeeker {
 	}
 		
 	static void runTests() {
+		year = 1300;
+		System.out.println("Test if year" + year + " is leap: " + isLeapYer(year));
+	
 		String dateValue="10 October 2010";
 		MyDate date = processDateString(dateValue); //new MyDate("10", "October", "2010");
 		date.printDayOfWeek();
+
+		dateValue="90 FEBRuary 1111";
+		date = processDateString(dateValue); //new MyDate("10", "October", "2010");
+		date.printDayOfWeek();
 		
+		dateValue="0 janUARY 0000";
+		date = processDateString(dateValue); //new MyDate("10", "October", "2010");
+		date.printDayOfWeek();
+
+		dateValue="00 december 9999";
+		date = processDateString(dateValue); //new MyDate("10", "October", "2010");
+		date.printDayOfWeek();
+		
+		String dateValue="10 Octobbb 2010";
+		MyDate date = processDateString(dateValue); //new MyDate("10", "October", "2010");
+		date.printDayOfWeek();
+		
+/*		
 		dateValue="17 FEBRuary 2014";
 		date = processDateString(dateValue); //new MyDate("10", "October", "2010");
 		date.printDayOfWeek();
@@ -190,5 +231,6 @@ public class CalendarSeeker {
 		dateValue="01 FEBRuary 2014";
 		date = processDateString(dateValue); //new MyDate("10", "October", "2010");
 		date.printDayOfWeek();
+		*/
 	}
 }
