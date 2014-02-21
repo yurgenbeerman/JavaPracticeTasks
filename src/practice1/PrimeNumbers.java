@@ -24,43 +24,50 @@ import java.util.*;
 
 public class PrimeNumbers {
 
+	static final boolean IS_TEST = false;
+
 	public static void taskResult(boolean isPackageFinalized) {
 		System.out.println("\n--- PrimeNumbers ---");
-	
-		Integer num = inputNumber();
 		
-		if (num > 2) {
-			String resultStr = "[2";
+		if ((isPackageFinalized) && (!IS_TEST)) {
+			Integer num = inputNumber();
+			
+			if (num > 2) {
+				String resultStr = "[2";
 
-			//collect all the prime numbers to resultStr
-			for (int i = 3; i <= num; i++) {
+				//collect all the prime numbers to resultStr
+				for (int i = 3; i <= num; i++) {
 
-				//check if it is a Prime number
-				boolean isPrime = true;
-				for(int j = 2; j < i; j++) {
-					if ( 0 == i % j ) isPrime = false;
+					//check if it is a Prime number
+					boolean isPrime = true;
+					for(int j = 2; j < i; j++) {
+						if ( 0 == i % j ) isPrime = false;
+					}
+					
+					if (isPrime) resultStr += ", " + i;
 				}
 				
-				if (isPrime) resultStr += ", " + i;
+				showResult(resultStr + "]");
+				
+			} else {
+				if (num.equals(2)) showResult("[2]");
+				else System.out.println("There's no prime number which is smaller or equal to " + num);
 			}
-			
-			showResult(resultStr + "]");
-			
 		} else {
-			if (num.equals(2)) showResult("[2]");
-			else System.out.println("There's no prime number which is smaller or equal to " + num);
+			runTests();
 		}
 	}
+
 	
-	static void isNotNegativeIntegerNumberTests() {
-		System.out.println("isNotNegativeIntegerNumber 1" + isNotNegativeIntegerNumber("12q"));
-		System.out.println("isNotNegativeIntegerNumber 2" + isNotNegativeIntegerNumber("1.2"));
-		System.out.println("isNotNegativeIntegerNumber 3" + isNotNegativeIntegerNumber("1,2"));
-		System.out.println("isNotNegativeIntegerNumber 4" + isNotNegativeIntegerNumber("12"));
-		System.out.println("isNotNegativeIntegerNumber 4" + isNotNegativeIntegerNumber("000"));
-		System.out.println("isNotNegativeIntegerNumber 4" + isNotNegativeIntegerNumber("-0"));
-		System.out.println("isNotNegativeIntegerNumber 4" + isNotNegativeIntegerNumber(""));
-		System.out.println("isNotNegativeIntegerNumber 4" + isNotNegativeIntegerNumber(" "));
+	static void runTests() {
+		System.out.println("isNotNegativeIntegerNumber |12q|" + isNotNegativeIntegerNumber("12q"));
+		System.out.println("isNotNegativeIntegerNumber |1.2|" + isNotNegativeIntegerNumber("1.2"));
+		System.out.println("isNotNegativeIntegerNumber |1,2|" + isNotNegativeIntegerNumber("1,2"));
+		System.out.println("isNotNegativeIntegerNumber |12|" + isNotNegativeIntegerNumber("12"));
+		System.out.println("isNotNegativeIntegerNumber |000|" + isNotNegativeIntegerNumber("000"));
+		System.out.println("isNotNegativeIntegerNumber |-0|" + isNotNegativeIntegerNumber("-0"));
+		System.out.println("isNotNegativeIntegerNumber ||" + isNotNegativeIntegerNumber(""));
+		System.out.println("isNotNegativeIntegerNumber | |" + isNotNegativeIntegerNumber(" "));
 	}
 	
 	public static boolean isNotNegativeIntegerNumber(String s) {
