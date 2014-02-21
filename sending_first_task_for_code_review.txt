@@ -1,0 +1,9 @@
+Hi!
+I've completed my first task.
+
+Here is folder structure for all my tasks: https://github.com/yurgenbeerman/JavaPracticeTasks
+/src/package1 contais souces for the first task.
+
+Please get local copy of the whole JavaPracticeTasks warehouse, modify c.cmd (to compile) and r.cmd (to run).
+
+I will be grateful for all comments!
