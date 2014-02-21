@@ -11,19 +11,19 @@ import practice1.*;
 
 public class Practice1Results{
 
-	static final boolean IS_DONE = false;
+	static final boolean IS_FINALIZED = true;
 	
 	public static void main(String[] args) {
 
-		if (IS_DONE) {
-			//done tasks
-			PrimeNumbers.taskResult();
-			NeighbouringNumbers.taskResult();
-			Anagram.taskResult();
-
+		if (IS_FINALIZED) {
+			//finalized tasks - to show
+			PrimeNumbers.taskResult(IS_FINALIZED);
+			NeighbouringNumbers.taskResult(IS_FINALIZED);			
+			Anagram.taskResult(IS_FINALIZED);
+			CalendarSeeker.taskResult(IS_FINALIZED);
 		} else {
-			//tasks in process
-			CalendarSeeker.taskResult();
+			//tasks in process - to test
+
 		}
 	}
 }

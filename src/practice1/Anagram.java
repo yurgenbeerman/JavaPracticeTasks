@@ -24,12 +24,10 @@ public class Anagram {
 
 	static final boolean IS_TEST = false;
 
-	public static void taskResult() {
+	public static void taskResult(boolean isPackageFinalized) {
 		System.out.println("\n--- Anagram ---");
 
-
-
-		if (!IS_TEST) {
+		if ((isPackageFinalized) && (!IS_TEST)) {
 			Scanner in = new Scanner(System.in);
 			String string1 = inputString(in, 1);
 			String string2 = inputString(in, 2);

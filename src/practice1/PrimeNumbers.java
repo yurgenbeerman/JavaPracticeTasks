@@ -24,7 +24,7 @@ import java.util.*;
 
 public class PrimeNumbers {
 
-	public static void taskResult() {
+	public static void taskResult(boolean isPackageFinalized) {
 		System.out.println("\n--- PrimeNumbers ---");
 	
 		Integer num = inputNumber();
