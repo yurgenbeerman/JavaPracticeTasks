@@ -5,7 +5,7 @@ package practice1;
 */
 
 /**
-https://learning.globallogic.com/moodle/mod/page/view.php?id=23
+Java SE Basics Practice 1
 1. Prime Numbers
 Business-Logic Requirements:
 Program should find prime numbers which are smaller or equal to the inputted from keyboard integer number. Prime numbers - integral numbers that are not evenly divisible by any other numbers except for themselves and 1. For example, for input number 6, the output of the program should be: [2, 3, 5].

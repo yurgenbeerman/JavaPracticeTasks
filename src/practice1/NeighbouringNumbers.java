@@ -5,7 +5,7 @@ package practice1;
 */
 
 /**
-https://learning.globallogic.com/moodle/mod/page/view.php?id=23
+Java SE Basics Practice 1
 2. Arrays - neighbouring numbers
 Business-Logic Requirements:
 Find two neighbouring numbers in an array with the smallest distance to each other. The index of the first number should be outputted to the screen. For example, in the sequence 4 8 6 1 2 9 4 the minimum distance is 1 (between 1 and 2). The function should return the index 3 (of number 1).

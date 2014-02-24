@@ -5,7 +5,7 @@ package practice1;
 */
 
 /**
-https://learning.globallogic.com/moodle/mod/page/view.php?id=23
+Java SE Basics Practice 1
 4. Calendar Seeker
 Business-Logic Requirements:
 Implement a program that prints out the day of the week for a given day (1..31), month (1..12) and year. For example, for a given input "10 October 2010" it should print to the screen "Sunday"

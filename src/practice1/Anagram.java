@@ -5,7 +5,7 @@ package practice1;
 */
 
 /**
-https://learning.globallogic.com/moodle/mod/page/view.php?id=23
+Java SE Basics Practice 1
 3. Anagram
 Business-Logic Requirements:
 An anagram is a word or a phrase that can be created by rearranging the letters of another given word or phrase. We ignore white spaces and letter case. The all letters of "Desperation" can be rearranged to the phrase "A Rope Ends It". The program should receive input of two strings and give the output to screen telling whether these words are anagrams

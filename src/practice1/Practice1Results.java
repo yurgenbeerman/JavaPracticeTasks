@@ -5,7 +5,7 @@ package practice1;
 */
 
 /**
-all tasks are described at https://learning.globallogic.com/moodle/mod/page/view.php?id=23 and in each *.class
+Java SE Basics Practice 1
 
 
 */
