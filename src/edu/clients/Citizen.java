@@ -8,7 +8,7 @@ import edu.communications.Emailable;
 public class Citizen implements Emailable{
     FullName fullName;
 
-    FullName getFullName() {
+    public String getFullName() {
         return fullName.toString();
     }
 }

@@ -18,7 +18,8 @@ public class OrganizationDocument {
     Date[] documentStatusDate;
     long orgId;
 
-    InformationResponsible informationResponsible;
+    Object Author;
+
 }
 
 Enum DocType {"Information Request", "Compliant","Thanks"}

@@ -8,7 +8,7 @@ public class FullName {
     String secondName;
     String surname;
 
-    toString() {
+    public String toString() {
         return (surname + " " + name + " " + secondName);
     }
 }

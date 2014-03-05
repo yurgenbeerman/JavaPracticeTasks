@@ -1,11 +1,12 @@
 package edu.services.orgs;
 
 import edu.communications.Address;
+import edu.communications.Emailable;
 
 /**
  * Created by yurii.pyvovarenko on 3/4/14.
  */
-public class PublicService {
+public class PublicService implements Emailable {
     long orgId;
     Address address;
     String orgName;

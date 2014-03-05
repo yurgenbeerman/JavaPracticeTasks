@@ -1,11 +1,14 @@
 package edu.services.docs;
 
+import edu.services.servants.InformationResponsible;
+
 /**
  * Created by yurii.pyvovarenko on 3/4/14.
  */
 public class IncomingDocument extends OrganizationDocument {
     long incomingDocResponsibleId;
     long reactionDocumentId;
+    InformationResponsible informationResponsible;
 
     public long getIncomingDocResponsibleId() {
         return incomingDocResponsibleId;
