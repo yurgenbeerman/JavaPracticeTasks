@@ -1,0 +1,17 @@
+E:\java_projects(Yura)\java_tasks\JavaPracticeTasks\src\edu\communications\Address.java
+E:\java_projects(Yura)\java_tasks\JavaPracticeTasks\src\edu\communications\Emailable.java
+
+E:\java_projects(Yura)\java_tasks\JavaPracticeTasks\src\edu\clients\Citizen.java
+E:\java_projects(Yura)\java_tasks\JavaPracticeTasks\src\edu\clients\FullName.java
+
+E:\java_projects(Yura)\java_tasks\JavaPracticeTasks\src\edu\services\orgs\PublicService.java
+
+E:\java_projects(Yura)\java_tasks\JavaPracticeTasks\src\edu\services\docs\Email.java
+E:\java_projects(Yura)\java_tasks\JavaPracticeTasks\src\edu\services\docs\IncomingDocument.java
+E:\java_projects(Yura)\java_tasks\JavaPracticeTasks\src\edu\services\docs\InformationRequest.java
+E:\java_projects(Yura)\java_tasks\JavaPracticeTasks\src\edu\services\docs\OrganizationDocument.java
+E:\java_projects(Yura)\java_tasks\JavaPracticeTasks\src\edu\services\docs\OutcomingDocument.java
+E:\java_projects(Yura)\java_tasks\JavaPracticeTasks\src\edu\services\servants\InformationResponsible.java
+E:\java_projects(Yura)\java_tasks\JavaPracticeTasks\src\edu\services\servants\PublicServant.java
+
+E:\java_projects(Yura)\java_tasks\JavaPracticeTasks\src\edu\services\PublicServiceDemo.java

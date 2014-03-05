@@ -7,11 +7,28 @@ import edu.communications.Emailable;
  * Created by yurii.pyvovarenko on 3/4/14.
  */
 public class PublicService implements Emailable {
-    long orgId;
-    Address address;
-    String orgName;
-    int hierarchyLevel;
-    long parentOrgId;
+    private static long lastOrgId;
+
+    private long orgId;
+    private Address address;
+    private String orgName;
+    private int hierarchyLevel;
+    private long parentOrgId;
+    private String emailAddress;
+
+    public PublicService(String orgName) {
+        this.orgId = PublicService.lastOrgId;
+        PublicService.lastOrgId++;
+        this.orgName = orgName;
+    }
+
+    public String getEmailAddress() {
+        return emailAddress;
+    }
+
+    public void setEmailAddress(String emailAddress) {
+        this.emailAddress = emailAddress;
+    }
 
     public Long getOrgId() {
         return orgId;

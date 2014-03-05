@@ -1,0 +1,7 @@
+E:\java_projects(Yura)\java_tasks\JavaPracticeTasks\src\edu\practice1\Messages.java
+E:\java_projects(Yura)\java_tasks\JavaPracticeTasks\src\edu\practice1\Utils.java
+E:\java_projects(Yura)\java_tasks\JavaPracticeTasks\src\edu\practice1\Practice1Results.java
+E:\java_projects(Yura)\java_tasks\JavaPracticeTasks\src\edu\practice1\PrimeNumbers.java
+E:\java_projects(Yura)\java_tasks\JavaPracticeTasks\src\edu\practice1\NeighbouringNumbers.java
+E:\java_projects(Yura)\java_tasks\JavaPracticeTasks\src\edu\practice1\Anagram.java
+E:\java_projects(Yura)\java_tasks\JavaPracticeTasks\src\edu\practice1\CalendarSeeker.java

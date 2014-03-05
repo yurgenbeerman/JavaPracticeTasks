@@ -1,21 +1,27 @@
 package edu.services.docs;
 
+import edu.clients.Requester;
+import edu.services.orgs.PublicService;
 import edu.services.servants.InformationResponsible;
 
 /**
  * Created by yurii.pyvovarenko on 3/4/14.
  */
 public class IncomingDocument extends OrganizationDocument {
-    long incomingDocResponsibleId;
-    long reactionDocumentId;
-    InformationResponsible informationResponsible;
+    private long incomingDocResponsibleId;
+    private long reactionDocumentId;
+    private InformationResponsible informationResponsible;
+
+    public IncomingDocument(DocType documentType, Requester author, PublicService publicService) {
+        super(documentType, author, publicService);
+    }
 
     public long getIncomingDocResponsibleId() {
         return incomingDocResponsibleId;
     }
 
     public String getIncomingDocResponsibleName() {
-        return informationResponsible.getFullName();
+        return informationResponsible.getFullNameString();
     }
 
     public void setIncomingDocResponsibleId(long incomingDocResponsibleId) {
