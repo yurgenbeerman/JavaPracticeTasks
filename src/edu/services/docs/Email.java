@@ -1,22 +1,32 @@
 package edu.services.docs;
 
+import java.util.GregorianCalendar;
+
 /**
  * Created by Lena on 05.03.14.
  */
-public class Email {
-    String emailFromAddress;
-    String emailToAddresses;
-    String emailCCAddresses;
-    String emailBCCAddresses;
-    String emailText;
-    String emailSendDate;
+public final class Email extends Text {
+    private String emailFromAddress;
+    private String emailToAddresses;
+    private String emailCCAddresses;
+    private String emailBCCAddresses;
+    private String emailSendDate;
+
+    /* IMPORTANT! all setters must check "if (! isEmailSent)" */
+    public void sendEmail() {
+        //...
+        this.emailSendDate = (new GregorianCalendar()).toString();
+        this.isFinalized = true;
+    }
 
     public String getEmailFromAddress() {
         return emailFromAddress;
     }
 
     public void setEmailFromAddress(String emailFromAddress) {
-        this.emailFromAddress = emailFromAddress;
+        if (! isFinalized) {
+            this.emailFromAddress = emailFromAddress;
+        }
     }
 
     public String getEmailToAddresses() {
@@ -24,7 +34,9 @@ public class Email {
     }
 
     public void setEmailToAddresses(String emailToAddresses) {
-        this.emailToAddresses = emailToAddresses;
+        if (! isFinalized) {
+            this.emailToAddresses = emailToAddresses;
+        }
     }
 
     public String getEmailCCAddresses() {
@@ -32,7 +44,9 @@ public class Email {
     }
 
     public void setEmailCCAddresses(String emailCCAddresses) {
-        this.emailCCAddresses = emailCCAddresses;
+        if (! isFinalized) {
+            this.emailCCAddresses = emailCCAddresses;
+        }
     }
 
     public String getEmailBCCAddresses() {
@@ -40,15 +54,19 @@ public class Email {
     }
 
     public void setEmailBCCAddresses(String emailBCCAddresses) {
-        this.emailBCCAddresses = emailBCCAddresses;
+        if (! isFinalized) {
+            this.emailBCCAddresses = emailBCCAddresses;
+        }
     }
 
-    public String getEmailText() {
-        return emailText;
+    public String getText() {
+        return text;
     }
 
-    public void setEmailText(String emailText) {
-        this.emailText = emailText;
+    public void setText(String text) {
+        if (! isFinalized) {
+            this.text = text;
+        }
     }
 
     public String getEmailSendDate() {
@@ -56,6 +74,8 @@ public class Email {
     }
 
     public void setEmailSendDate(String emailSendDate) {
-        this.emailSendDate = emailSendDate;
+        if (! isFinalized) {
+            this.emailSendDate = emailSendDate;
+        }
     }
 }

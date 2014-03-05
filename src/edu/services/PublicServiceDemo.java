@@ -33,14 +33,14 @@ public class PublicServiceDemo {
         PublicService publicService = new PublicService("Improvements service");
 
         InformationRequest infoRequest = new InformationRequest(citizen, publicService);
-        infoRequest.setDocumentText("What parks and streets improvements are planned for 2014 in Kyiv?");
+        infoRequest.setText("What parks and streets improvements are planned for 2014 in Kyiv?");
 
         if (infoRequest != null) {
             citizen.addRequest(infoRequest);
             System.out.println("citizen: " + citizen.getFullNameString());
             System.out.println("publicService: " + publicService.getOrgName());
             System.out.println("infoRequest: ");
-            System.out.println("    text: " + infoRequest.getDocumentText());
+            System.out.println("    text: " + infoRequest.getText());
             System.out.println("    orgId: " + infoRequest.getOrgId());
             System.out.println("    DocumentNumber: " + infoRequest.getDocumentNumber());
             System.out.println("    DocumentStatus: " + infoRequest.getDocumentStatus());
@@ -60,7 +60,7 @@ public class PublicServiceDemo {
 
         OutcomingDocument outcomingDocument =
                 new OutcomingDocument(informationResponsibleServant, publicService);
-        outcomingDocument.setDocumentText(informationResponsibleServant.getInformationForReply());
+        outcomingDocument.setText(informationResponsibleServant.getInformationForReply());
 
         infoRequest.setReactionDocumentId(outcomingDocument.getDocumentId());
         outcomingDocument.setInitiatingDocId(infoRequest.getDocumentId());

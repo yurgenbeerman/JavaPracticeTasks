@@ -6,7 +6,7 @@ import edu.services.orgs.PublicService;
 /**
  * Created by Lena on 05.03.14.
  */
-public class InformationRequest extends IncomingDocument {
+public final class InformationRequest extends IncomingDocument {
 
     private String addressForReply;
     private String emailForReply;

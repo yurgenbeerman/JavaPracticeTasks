@@ -4,10 +4,8 @@ import edu.clients.Requester;
 import edu.services.orgs.PublicService;
 import edu.services.servants.PublicServant;
 
-import java.util.GregorianCalendar;
-
 /**
- * Created by Lena on 05.03.14.
+ * Created by Yuri Pyvovarenko on 05.03.14.
  */
 
 public class OutcomingDocument extends OrganizationDocument {
@@ -24,9 +22,8 @@ public class OutcomingDocument extends OrganizationDocument {
     }
 
     public void publishToRequester(Requester requester) {
-
-        OutcomingDocument response = this;//this.clone(); //TODO implement clone() for OutcomingDocument
-        requester.addResponse(response);
+        this.isFinalized = true;
+        requester.addResponse(this);
     }
 
     public long getInitiatingDocId() {
@@ -34,6 +31,10 @@ public class OutcomingDocument extends OrganizationDocument {
     }
 
     public void setInitiatingDocId(long initiatingDocId) {
-        this.initiatingDocId = initiatingDocId;
+        if (!isFinalized) {
+            this.initiatingDocId = initiatingDocId;
+        }
     }
+
+    /* IMPORTANT! Each setter (modifier method) body must be enclosed by "if (!isFinalized) {}" ! */
 }

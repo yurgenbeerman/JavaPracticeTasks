@@ -1,17 +1,15 @@
 package edu.services.docs;
 
-import edu.clients.Citizen;
 import edu.clients.Requester;
 import edu.services.orgs.PublicService;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.GregorianCalendar;
 
 /**
  * Created by yurii.pyvovarenko on 3/4/14.
  */
-public class OrganizationDocument {
+public class OrganizationDocument extends Text {
 
     private static long lastDocumentId;
 
@@ -25,7 +23,7 @@ public class OrganizationDocument {
     private ArrayList<GregorianCalendar> documentStatusDate;
     private long orgId;
     private Requester author;
-    private String documentText;
+    private String text;
 
     public OrganizationDocument() {
         this.documentId = OrganizationDocument.lastDocumentId;
@@ -127,11 +125,11 @@ public class OrganizationDocument {
         this.author = author;
     }
 
-    public String getDocumentText() {
-        return documentText;
+    public String getText() {
+        return text;
     }
 
-    public void setDocumentText(String documentText) {
-        this.documentText = documentText;
+    public void setText(String text) {
+        this.text = text;
     }
 }
