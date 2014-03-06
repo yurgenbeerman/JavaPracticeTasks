@@ -10,17 +10,16 @@ import java.util.GregorianCalendar;
  * Created by yurii.pyvovarenko on 3/4/14.
  */
 public class OrganizationDocument extends Text {
-
     private static long lastDocumentId;
 
+    protected DocumentLifecycle documentLifecycle;
     private long documentId;
     private String documentName;
     private long documentAuthorId;
     private GregorianCalendar documentCreationDate;
-    private DocType documentType;
+    private DocumentType documentType;
     private String documentNumber;
-    private ArrayList<String> documentStatus;
-    private ArrayList<GregorianCalendar> documentStatusDate;
+    private DocumentStatus documentStatus;
     private long orgId;
     private Requester author;
     private String text;
@@ -30,7 +29,7 @@ public class OrganizationDocument extends Text {
         OrganizationDocument.lastDocumentId++;
     }
 
-    public OrganizationDocument(DocType documentType, Requester author, PublicService publicService) {
+    public OrganizationDocument(DocumentType documentType, Requester author, PublicService publicService) {
         this.documentId = OrganizationDocument.lastDocumentId;
         OrganizationDocument.lastDocumentId++;
 
@@ -38,13 +37,9 @@ public class OrganizationDocument extends Text {
         this.orgId = publicService.getOrgId();
         this.documentType = documentType;
 
-        this.documentNumber = DocType.getShortCode(documentType) + this.documentId;
+        this.documentNumber = documentType.getDocTypeShortName() + this.documentId;
 
-        //TODO refactor to OrgDocStatus object + OrgDocStatuses enum
-        documentStatus = new ArrayList<String>();
-        documentStatus.add(OrgDocStatus.CREATED.toString());
-        documentStatusDate = new ArrayList<GregorianCalendar>();
-        documentStatusDate.add(new GregorianCalendar());
+        documentStatus = new DocumentStatus(documentType.getDocumentLifecycle());
 
         //TODO assign other fields
     }
@@ -77,13 +72,17 @@ public class OrganizationDocument extends Text {
         this.documentCreationDate = documentCreationDate;
     }
 
-    public DocType getDocumentType() {
+    public DocumentType getDocumentType() {
         return documentType;
     }
 
-    public void setDocumentType(DocType documentType) {
-        this.documentType = documentType;
-    }
+    /*
+     * I think we do not need to change document type after its creation
+     *
+     * public void setDocumentType(DocType documentType) {
+     *   this.documentType = documentType;
+     * }
+    */
 
     public String getDocumentNumber() {
         return documentNumber;
@@ -93,20 +92,25 @@ public class OrganizationDocument extends Text {
         this.documentNumber = documentNumber;
     }
 
-    public String getDocumentStatus() {
-        return documentStatus.get(documentStatus.size()-1);
+    public DocumentStatus getDocumentStatus() {
+        return documentStatus;
     }
 
-    public void setDocumentStatus(String documentStatus) {
-        this.documentStatus.add(documentStatus);
+    public String getDocumentStatusString() {
+        return documentStatus.getCurrentDocumentStatus().toString();
     }
 
-    public GregorianCalendar getDocumentStatusDate() {
-        return documentStatusDate.get(documentStatusDate.size()-1);
+
+    public void setNextDocumentStatus() {
+        this.documentStatus.setNextDocumentStatus();
     }
 
-    public void setDocumentStatusDate(GregorianCalendar documentStatusDate) {
-        this.documentStatusDate.add(documentStatusDate);
+    public void setPreviousDocumentStatus() {
+        this.documentStatus.setPreviousDocumentStatus();
+    }
+
+    public OrgDocStatusesHistory getStatusesHistory() {
+        return new OrgDocStatusesHistory(this);
     }
 
     public long getOrgId() {
@@ -131,5 +135,15 @@ public class OrganizationDocument extends Text {
 
     public void setText(String text) {
         this.text = text;
+    }
+
+    public String toString() {
+        String result = "infoRequest: " +
+        "\n    text: " + this.getText() +
+        "\n    orgId: " + this.getOrgId() +
+        "\n    DocumentNumber: " + this.getDocumentNumber() +
+        "\n    DocumentStatusesHistory: " + this.getStatusesHistory().toString();
+
+        return result;
     }
 }

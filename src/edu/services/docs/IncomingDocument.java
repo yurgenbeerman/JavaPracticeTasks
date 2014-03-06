@@ -12,7 +12,7 @@ public class IncomingDocument extends OrganizationDocument {
     private long reactionDocumentId;
     private InformationResponsible informationResponsible;
 
-    public IncomingDocument(DocType documentType, Requester author, PublicService publicService) {
+    public IncomingDocument(DocumentType documentType, Requester author, PublicService publicService) {
         super(documentType, author, publicService);
     }
 

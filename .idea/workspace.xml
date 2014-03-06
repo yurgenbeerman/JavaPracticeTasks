@@ -64,83 +64,89 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="OrgDocStatus.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/edu/services/docs/OrgDocStatus.java">
+      <file leaf-file-name="OrgDocStatusesHistory.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/edu/services/docs/OrgDocStatusesHistory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="51" selection-start="119" selection-end="119" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="204">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DocType.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/edu/services/docs/DocType.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="1" selection-start="322" selection-end="322" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Requester.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/edu/clients/Requester.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="62" selection-start="416" selection-end="416" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
+            <state line="29" column="24" selection-start="939" selection-end="939" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="833">
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#665#666#0" expanded="true" />
+                <element signature="e#711#712#0" expanded="true" />
+                <element signature="e#781#782#0" expanded="true" />
+                <element signature="e#825#826#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Text.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/edu/services/docs/Text.java">
+      <file leaf-file-name="DocumentStatus.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/edu/services/docs/DocumentStatus.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="23" selection-start="150" selection-end="150" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OrganizationDocument.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/edu/services/docs/OrganizationDocument.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="36" selection-start="334" selection-end="334" vertical-scroll-proportion="-1.3076923" vertical-offset="153" max-vertical-offset="1717">
+            <state line="20" column="0" selection-start="598" selection-end="598" vertical-scroll-proportion="0.0" vertical-offset="237" max-vertical-offset="1088">
               <folding>
-                <element signature="method#getDocumentStatus#0;class#OrganizationDocument#0" expanded="false" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#1573#1574#0" expanded="true" />
+                <element signature="e#1622#1623#0" expanded="true" />
+                <element signature="e#1683#1684#0" expanded="true" />
+                <element signature="e#1729#1730#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Email.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/edu/services/docs/Email.java">
+      <file leaf-file-name="DocumentLifecycle.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/edu/services/docs/DocumentLifecycle.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="36" selection-start="255" selection-end="255" vertical-scroll-proportion="0.55016184" vertical-offset="0" max-vertical-offset="1479">
+            <state line="155" column="28" selection-start="3902" selection-end="3902" vertical-scroll-proportion="0.0" vertical-offset="2260" max-vertical-offset="2822">
               <folding>
-                <element signature="e#585#586#0" expanded="true" />
-                <element signature="e#624#625#0" expanded="true" />
-                <element signature="e#830#831#0" expanded="true" />
-                <element signature="e#869#870#0" expanded="true" />
-                <element signature="e#1075#1076#0" expanded="true" />
-                <element signature="e#1114#1115#0" expanded="true" />
-                <element signature="e#1321#1322#0" expanded="true" />
-                <element signature="e#1361#1362#0" expanded="true" />
-                <element signature="e#1559#1560#0" expanded="true" />
-                <element signature="e#1586#1587#0" expanded="true" />
-                <element signature="e#1741#1742#0" expanded="true" />
-                <element signature="e#1777#1778#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#924#925#0" expanded="true" />
+                <element signature="e#963#964#0" expanded="true" />
+                <element signature="e#1024#1025#0" expanded="true" />
+                <element signature="e#1080#1081#0" expanded="true" />
+                <element signature="e#1120#1121#0" expanded="true" />
+                <element signature="e#1159#1160#0" expanded="true" />
+                <element signature="e#1220#1221#0" expanded="true" />
+                <element signature="e#1276#1277#0" expanded="true" />
+                <element signature="e#1314#1315#0" expanded="true" />
+                <element signature="e#1348#1349#0" expanded="true" />
+                <element signature="e#1401#1402#0" expanded="true" />
+                <element signature="e#1447#1448#0" expanded="true" />
+                <element signature="e#1483#1484#0" expanded="true" />
+                <element signature="e#1517#1518#0" expanded="true" />
+                <element signature="e#1570#1571#0" expanded="true" />
+                <element signature="e#1616#1617#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PublicServiceDemo.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="PublicServiceDemo.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/edu/services/PublicServiceDemo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="38" selection-start="1381" selection-end="1381" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1326">
+            <state line="49" column="59" selection-start="1983" selection-end="1983" vertical-scroll-proportion="0.0017793594" vertical-offset="730" max-vertical-offset="1343">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DocumentType.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/edu/services/docs/DocumentType.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="53" selection-start="159" selection-end="178" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="816">
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#607#608#0" expanded="true" />
+                <element signature="e#641#642#0" expanded="true" />
+                <element signature="e#695#696#0" expanded="true" />
+                <element signature="e#741#742#0" expanded="true" />
+                <element signature="e#784#785#0" expanded="true" />
+                <element signature="e#823#824#0" expanded="true" />
+                <element signature="e#887#888#0" expanded="true" />
+                <element signature="e#943#944#0" expanded="true" />
+                <element signature="e#998#999#0" expanded="true" />
+                <element signature="e#1038#1039#0" expanded="true" />
+                <element signature="e#1115#1116#0" expanded="true" />
+                <element signature="e#1173#1174#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -149,7 +155,25 @@
       <file leaf-file-name="InformationRequest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/edu/services/docs/InformationRequest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="13" selection-start="152" selection-end="152" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
+            <state line="11" column="0" selection-start="274" selection-end="274" vertical-scroll-proportion="0.0" vertical-offset="50" max-vertical-offset="629">
+              <folding>
+                <element signature="e#479#480#0" expanded="true" />
+                <element signature="e#517#518#0" expanded="true" />
+                <element signature="e#579#580#0" expanded="true" />
+                <element signature="e#633#634#0" expanded="true" />
+                <element signature="e#673#674#0" expanded="true" />
+                <element signature="e#709#710#0" expanded="true" />
+                <element signature="e#767#768#0" expanded="true" />
+                <element signature="e#817#818#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IncomingDocument.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/edu/services/docs/IncomingDocument.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="0" selection-start="508" selection-end="508" vertical-scroll-proportion="0.0" vertical-offset="157" max-vertical-offset="663">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -160,12 +184,8 @@
       <file leaf-file-name="OutcomingDocument.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/edu/services/docs/OutcomingDocument.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="0" selection-start="292" selection-end="292" vertical-scroll-proportion="-3.709091" vertical-offset="0" max-vertical-offset="782">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#794#795#0" expanded="true" />
-                <element signature="e#832#833#0" expanded="true" />
-              </folding>
+            <state line="12" column="0" selection-start="292" selection-end="292" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="782">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -173,25 +193,8 @@
       <file leaf-file-name="Address.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/edu/communications/Address.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="37" selection-start="145" selection-end="145" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="969">
-              <folding>
-                <element signature="e#468#469#0" expanded="true" />
-                <element signature="e#510#511#0" expanded="true" />
-                <element signature="e#558#559#0" expanded="true" />
-                <element signature="e#598#599#0" expanded="true" />
-                <element signature="e#642#643#0" expanded="true" />
-                <element signature="e#678#679#0" expanded="true" />
-                <element signature="e#726#727#0" expanded="true" />
-                <element signature="e#766#767#0" expanded="true" />
-                <element signature="e#806#807#0" expanded="true" />
-                <element signature="e#838#839#0" expanded="true" />
-                <element signature="e#882#883#0" expanded="true" />
-                <element signature="e#918#919#0" expanded="true" />
-                <element signature="e#964#965#0" expanded="true" />
-                <element signature="e#1002#1003#0" expanded="true" />
-                <element signature="e#1048#1049#0" expanded="true" />
-                <element signature="e#1086#1087#0" expanded="true" />
-              </folding>
+            <state line="7" column="20" selection-start="145" selection-end="145" vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="969">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -211,19 +214,24 @@
         <option value="$PROJECT_DIR$/src/edu/communications/Address.java" />
         <option value="$PROJECT_DIR$/src/edu/clients/FullName.java" />
         <option value="$PROJECT_DIR$/src/edu/services/orgs/PublicService.java" />
-        <option value="$PROJECT_DIR$/src/edu/services/docs/IncomingDocument.java" />
         <option value="$PROJECT_DIR$/src/edu/services/servants/InformationResponsible.java" />
         <option value="$PROJECT_DIR$/src/edu/services/servants/PublicServant.java" />
         <option value="$PROJECT_DIR$/src/edu/services/docs/DocType.java" />
         <option value="$PROJECT_DIR$/src/edu/services/docs/OrgDocStatus.java" />
         <option value="$PROJECT_DIR$/src/edu/clients/Requester.java" />
         <option value="$PROJECT_DIR$/src/edu/clients/Citizen.java" />
-        <option value="$PROJECT_DIR$/src/edu/services/PublicServiceDemo.java" />
-        <option value="$PROJECT_DIR$/src/edu/services/docs/InformationRequest.java" />
-        <option value="$PROJECT_DIR$/src/edu/services/docs/OrganizationDocument.java" />
         <option value="$PROJECT_DIR$/src/edu/services/docs/Text.java" />
         <option value="$PROJECT_DIR$/src/edu/services/docs/OutcomingDocument.java" />
         <option value="$PROJECT_DIR$/src/edu/services/docs/Email.java" />
+        <option value="$PROJECT_DIR$/src/edu/services/docs/DocumentStatusesList.java" />
+        <option value="$PROJECT_DIR$/src/edu/services/docs/DocumentLifecycle.java" />
+        <option value="$PROJECT_DIR$/src/edu/services/docs/OrgDocStatusesHistory.java" />
+        <option value="$PROJECT_DIR$/src/edu/services/docs/DocumentType.java" />
+        <option value="$PROJECT_DIR$/src/edu/services/docs/IncomingDocument.java" />
+        <option value="$PROJECT_DIR$/src/edu/services/docs/DocumentStatus.java" />
+        <option value="$PROJECT_DIR$/src/edu/services/docs/OrganizationDocument.java" />
+        <option value="$PROJECT_DIR$/src/edu/services/docs/InformationRequest.java" />
+        <option value="$PROJECT_DIR$/src/edu/services/PublicServiceDemo.java" />
       </list>
     </option>
   </component>
@@ -461,6 +469,9 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="dynamic.classpath" value="false" />
+    <property name="OverrideImplement.combined" value="true" />
+    <property name="OverrideImplement.overriding.sorted" value="false" />
+    <property name="LayoutCode.rearrangeEntriesJava" value="false" />
   </component>
   <component name="RunManager" selected="Application.PublicServiceDemo">
     <configuration default="false" name="PublicServiceDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -513,19 +524,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -551,6 +549,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -620,6 +631,11 @@
     </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SliceManager">
+    <option name="analysisUIOptions">
+      <AnalysisUIOptions />
+    </option>
+  </component>
   <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="all">
     <option name="USER" value="" />
     <option name="PASSWORD" value="" />
@@ -667,10 +683,10 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26911315" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.41543514" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41543514" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -690,13 +706,13 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24924472" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26586103" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2288" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2288" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -720,6 +736,92 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/edu/clients/Requester.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="62" selection-start="416" selection-end="416" vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="374">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/services/docs/Text.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="23" selection-start="150" selection-end="150" vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="323">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/services/docs/OrganizationDocument.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="36" selection-start="334" selection-end="334" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="2397">
+          <folding>
+            <element signature="e#2138#2139#0" expanded="true" />
+            <element signature="e#2173#2174#0" expanded="true" />
+            <element signature="e#2420#2421#0" expanded="true" />
+            <element signature="e#2457#2458#0" expanded="true" />
+            <element signature="e#2517#2518#0" expanded="true" />
+            <element signature="e#2569#2570#0" expanded="true" />
+            <element signature="e#2618#2619#0" expanded="true" />
+            <element signature="e#2655#2656#0" expanded="true" />
+            <element signature="e#3131#3132#0" expanded="true" />
+            <element signature="e#3159#3160#0" expanded="true" />
+            <element signature="e#3199#3200#0" expanded="true" />
+            <element signature="e#3233#3234#0" expanded="true" />
+            <element signature="e#3269#3270#0" expanded="true" />
+            <element signature="e#3298#3299#0" expanded="true" />
+            <element signature="e#3345#3346#0" expanded="true" />
+            <element signature="e#3381#3382#0" expanded="true" />
+            <element signature="e#3412#3413#0" expanded="true" />
+            <element signature="e#3439#3440#0" expanded="true" />
+            <element signature="e#3479#3480#0" expanded="true" />
+            <element signature="e#3511#3512#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/services/docs/Email.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="36" selection-start="255" selection-end="255" vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="1479">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/services/PublicServiceDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="38" selection-start="1381" selection-end="1381" vertical-scroll-proportion="0.0" vertical-offset="646" max-vertical-offset="1326">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/services/docs/InformationRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="13" selection-start="152" selection-end="152" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="459">
+          <folding>
+            <element signature="e#479#480#0" expanded="true" />
+            <element signature="e#517#518#0" expanded="true" />
+            <element signature="e#579#580#0" expanded="true" />
+            <element signature="e#633#634#0" expanded="true" />
+            <element signature="e#673#674#0" expanded="true" />
+            <element signature="e#709#710#0" expanded="true" />
+            <element signature="e#767#768#0" expanded="true" />
+            <element signature="e#817#818#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/services/docs/OutcomingDocument.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="0" selection-start="292" selection-end="292" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="782">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/communications/Address.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="37" selection-start="145" selection-end="145" vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="969">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/services/orgs/PublicService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="14" selection-start="153" selection-end="158" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="1020">
@@ -732,7 +834,16 @@
     <entry file="file://$PROJECT_DIR$/src/edu/services/servants/PublicServant.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="42" selection-start="154" selection-end="154" vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="323">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#716#717#0" expanded="true" />
+            <element signature="e#776#777#0" expanded="true" />
+            <element signature="e#830#831#0" expanded="true" />
+            <element signature="e#860#861#0" expanded="true" />
+            <element signature="e#888#889#0" expanded="true" />
+            <element signature="e#928#929#0" expanded="true" />
+            <element signature="e#962#963#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -761,7 +872,9 @@
     <entry file="file://$PROJECT_DIR$/src/edu/services/servants/InformationResponsible.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="80" selection-start="223" selection-end="223" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="306">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -769,7 +882,26 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="49" selection-start="454" selection-end="476" vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="510">
           <folding>
-            <element signature="method#getDocumentStatus#0;class#OrganizationDocument#0" expanded="false" />
+            <element signature="e#2138#2139#0" expanded="true" />
+            <element signature="e#2173#2174#0" expanded="true" />
+            <element signature="e#2420#2421#0" expanded="true" />
+            <element signature="e#2457#2458#0" expanded="true" />
+            <element signature="e#2517#2518#0" expanded="true" />
+            <element signature="e#2569#2570#0" expanded="true" />
+            <element signature="e#2618#2619#0" expanded="true" />
+            <element signature="e#2655#2656#0" expanded="true" />
+            <element signature="e#3131#3132#0" expanded="true" />
+            <element signature="e#3159#3160#0" expanded="true" />
+            <element signature="e#3199#3200#0" expanded="true" />
+            <element signature="e#3233#3234#0" expanded="true" />
+            <element signature="e#3269#3270#0" expanded="true" />
+            <element signature="e#3298#3299#0" expanded="true" />
+            <element signature="e#3345#3346#0" expanded="true" />
+            <element signature="e#3381#3382#0" expanded="true" />
+            <element signature="e#3412#3413#0" expanded="true" />
+            <element signature="e#3439#3440#0" expanded="true" />
+            <element signature="e#3479#3480#0" expanded="true" />
+            <element signature="e#3511#3512#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -795,7 +927,16 @@
     <entry file="file://$PROJECT_DIR$/src/edu/services/servants/PublicServant.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="42" selection-start="154" selection-end="154" vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="323">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#716#717#0" expanded="true" />
+            <element signature="e#776#777#0" expanded="true" />
+            <element signature="e#830#831#0" expanded="true" />
+            <element signature="e#860#861#0" expanded="true" />
+            <element signature="e#888#889#0" expanded="true" />
+            <element signature="e#928#929#0" expanded="true" />
+            <element signature="e#962#963#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -824,7 +965,9 @@
     <entry file="file://$PROJECT_DIR$/src/edu/services/servants/InformationResponsible.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="80" selection-start="223" selection-end="223" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="306">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -832,7 +975,26 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="49" selection-start="454" selection-end="476" vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="510">
           <folding>
-            <element signature="method#getDocumentStatus#0;class#OrganizationDocument#0" expanded="false" />
+            <element signature="e#2138#2139#0" expanded="true" />
+            <element signature="e#2173#2174#0" expanded="true" />
+            <element signature="e#2420#2421#0" expanded="true" />
+            <element signature="e#2457#2458#0" expanded="true" />
+            <element signature="e#2517#2518#0" expanded="true" />
+            <element signature="e#2569#2570#0" expanded="true" />
+            <element signature="e#2618#2619#0" expanded="true" />
+            <element signature="e#2655#2656#0" expanded="true" />
+            <element signature="e#3131#3132#0" expanded="true" />
+            <element signature="e#3159#3160#0" expanded="true" />
+            <element signature="e#3199#3200#0" expanded="true" />
+            <element signature="e#3233#3234#0" expanded="true" />
+            <element signature="e#3269#3270#0" expanded="true" />
+            <element signature="e#3298#3299#0" expanded="true" />
+            <element signature="e#3345#3346#0" expanded="true" />
+            <element signature="e#3381#3382#0" expanded="true" />
+            <element signature="e#3412#3413#0" expanded="true" />
+            <element signature="e#3439#3440#0" expanded="true" />
+            <element signature="e#3479#3480#0" expanded="true" />
+            <element signature="e#3511#3512#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -862,23 +1024,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/practice1/JavaSourceFileExample.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="7" selection-start="792" selection-end="792" vertical-scroll-proportion="0.33333334" vertical-offset="97" max-vertical-offset="1088">
-          <folding />
-        </state>
+        <state line="27" column="7" selection-start="792" selection-end="792" vertical-scroll-proportion="0.33333334" vertical-offset="97" max-vertical-offset="1088" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/services/orgs/PublicService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="4" selection-start="577" selection-end="577" vertical-scroll-proportion="0.0" vertical-offset="104" max-vertical-offset="918">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/services/docs/IncomingDocument.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="66" selection-start="470" selection-end="499" vertical-scroll-proportion="0.0" vertical-offset="98" max-vertical-offset="663">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -901,20 +1052,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/services/docs/DocType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="1" selection-start="322" selection-end="322" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/services/docs/OrgDocStatus.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="51" selection-start="119" selection-end="119" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="204">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/services/servants/InformationResponsible.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="26" selection-start="570" selection-end="570" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442">
@@ -927,9 +1064,7 @@
     <entry file="file://$PROJECT_DIR$/src/edu/clients/Requester.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="62" selection-start="416" selection-end="416" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -950,63 +1085,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/communications/Address.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="37" selection-start="145" selection-end="145" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="969">
-          <folding>
-            <element signature="e#468#469#0" expanded="true" />
-            <element signature="e#510#511#0" expanded="true" />
-            <element signature="e#558#559#0" expanded="true" />
-            <element signature="e#598#599#0" expanded="true" />
-            <element signature="e#642#643#0" expanded="true" />
-            <element signature="e#678#679#0" expanded="true" />
-            <element signature="e#726#727#0" expanded="true" />
-            <element signature="e#766#767#0" expanded="true" />
-            <element signature="e#806#807#0" expanded="true" />
-            <element signature="e#838#839#0" expanded="true" />
-            <element signature="e#882#883#0" expanded="true" />
-            <element signature="e#918#919#0" expanded="true" />
-            <element signature="e#964#965#0" expanded="true" />
-            <element signature="e#1002#1003#0" expanded="true" />
-            <element signature="e#1048#1049#0" expanded="true" />
-            <element signature="e#1086#1087#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/services/PublicServiceDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="38" selection-start="1381" selection-end="1381" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1326">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/services/docs/InformationRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="13" selection-start="152" selection-end="152" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/services/docs/OrganizationDocument.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="36" selection-start="334" selection-end="334" vertical-scroll-proportion="-1.3076923" vertical-offset="153" max-vertical-offset="1717">
-          <folding>
-            <element signature="method#getDocumentStatus#0;class#OrganizationDocument#0" expanded="false" />
-          </folding>
+        <state line="7" column="20" selection-start="145" selection-end="145" vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="969">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/services/docs/OutcomingDocument.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="292" selection-end="292" vertical-scroll-proportion="-3.709091" vertical-offset="0" max-vertical-offset="782">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#794#795#0" expanded="true" />
-            <element signature="e#832#833#0" expanded="true" />
-          </folding>
+        <state line="12" column="0" selection-start="292" selection-end="292" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="782">
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1019,21 +1106,139 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/services/docs/Email.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="36" selection-start="255" selection-end="255" vertical-scroll-proportion="0.55016184" vertical-offset="0" max-vertical-offset="1479">
+        <state line="24" column="0" selection-start="626" selection-end="626" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1275">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/services/docs/DocumentLifecycle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="155" column="28" selection-start="3902" selection-end="3902" vertical-scroll-proportion="0.0" vertical-offset="2260" max-vertical-offset="2822">
           <folding>
-            <element signature="e#585#586#0" expanded="true" />
-            <element signature="e#624#625#0" expanded="true" />
-            <element signature="e#830#831#0" expanded="true" />
-            <element signature="e#869#870#0" expanded="true" />
-            <element signature="e#1075#1076#0" expanded="true" />
-            <element signature="e#1114#1115#0" expanded="true" />
-            <element signature="e#1321#1322#0" expanded="true" />
-            <element signature="e#1361#1362#0" expanded="true" />
-            <element signature="e#1559#1560#0" expanded="true" />
-            <element signature="e#1586#1587#0" expanded="true" />
-            <element signature="e#1741#1742#0" expanded="true" />
-            <element signature="e#1777#1778#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#924#925#0" expanded="true" />
+            <element signature="e#963#964#0" expanded="true" />
+            <element signature="e#1024#1025#0" expanded="true" />
+            <element signature="e#1080#1081#0" expanded="true" />
+            <element signature="e#1120#1121#0" expanded="true" />
+            <element signature="e#1159#1160#0" expanded="true" />
+            <element signature="e#1220#1221#0" expanded="true" />
+            <element signature="e#1276#1277#0" expanded="true" />
+            <element signature="e#1314#1315#0" expanded="true" />
+            <element signature="e#1348#1349#0" expanded="true" />
+            <element signature="e#1401#1402#0" expanded="true" />
+            <element signature="e#1447#1448#0" expanded="true" />
+            <element signature="e#1483#1484#0" expanded="true" />
+            <element signature="e#1517#1518#0" expanded="true" />
+            <element signature="e#1570#1571#0" expanded="true" />
+            <element signature="e#1616#1617#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/services/docs/DocumentType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="53" selection-start="159" selection-end="178" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="816">
+          <folding>
+            <element signature="e#607#608#0" expanded="true" />
+            <element signature="e#641#642#0" expanded="true" />
+            <element signature="e#695#696#0" expanded="true" />
+            <element signature="e#741#742#0" expanded="true" />
+            <element signature="e#784#785#0" expanded="true" />
+            <element signature="e#823#824#0" expanded="true" />
+            <element signature="e#887#888#0" expanded="true" />
+            <element signature="e#943#944#0" expanded="true" />
+            <element signature="e#998#999#0" expanded="true" />
+            <element signature="e#1038#1039#0" expanded="true" />
+            <element signature="e#1115#1116#0" expanded="true" />
+            <element signature="e#1173#1174#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/services/docs/IncomingDocument.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="0" selection-start="508" selection-end="508" vertical-scroll-proportion="0.0" vertical-offset="157" max-vertical-offset="663">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/services/docs/DocumentStatus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="0" selection-start="598" selection-end="598" vertical-scroll-proportion="0.0" vertical-offset="237" max-vertical-offset="1088">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1573#1574#0" expanded="true" />
+            <element signature="e#1622#1623#0" expanded="true" />
+            <element signature="e#1683#1684#0" expanded="true" />
+            <element signature="e#1729#1730#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/services/docs/OrganizationDocument.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="80" column="7" selection-start="2262" selection-end="2262" vertical-scroll-proportion="0.0" vertical-offset="938" max-vertical-offset="2329">
+          <folding>
+            <element signature="e#2138#2139#0" expanded="true" />
+            <element signature="e#2173#2174#0" expanded="true" />
+            <element signature="e#2420#2421#0" expanded="true" />
+            <element signature="e#2457#2458#0" expanded="true" />
+            <element signature="e#2517#2518#0" expanded="true" />
+            <element signature="e#2569#2570#0" expanded="true" />
+            <element signature="e#2618#2619#0" expanded="true" />
+            <element signature="e#2655#2656#0" expanded="true" />
+            <element signature="e#3131#3132#0" expanded="true" />
+            <element signature="e#3159#3160#0" expanded="true" />
+            <element signature="e#3199#3200#0" expanded="true" />
+            <element signature="e#3233#3234#0" expanded="true" />
+            <element signature="e#3269#3270#0" expanded="true" />
+            <element signature="e#3298#3299#0" expanded="true" />
+            <element signature="e#3345#3346#0" expanded="true" />
+            <element signature="e#3381#3382#0" expanded="true" />
+            <element signature="e#3412#3413#0" expanded="true" />
+            <element signature="e#3439#3440#0" expanded="true" />
+            <element signature="e#3479#3480#0" expanded="true" />
+            <element signature="e#3511#3512#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/services/docs/InformationRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="0" selection-start="274" selection-end="274" vertical-scroll-proportion="0.0" vertical-offset="50" max-vertical-offset="629">
+          <folding>
+            <element signature="e#479#480#0" expanded="true" />
+            <element signature="e#517#518#0" expanded="true" />
+            <element signature="e#579#580#0" expanded="true" />
+            <element signature="e#633#634#0" expanded="true" />
+            <element signature="e#673#674#0" expanded="true" />
+            <element signature="e#709#710#0" expanded="true" />
+            <element signature="e#767#768#0" expanded="true" />
+            <element signature="e#817#818#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/services/docs/OrgDocStatusesHistory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="24" selection-start="939" selection-end="939" vertical-scroll-proportion="0.0" vertical-offset="271" max-vertical-offset="833">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#665#666#0" expanded="true" />
+            <element signature="e#711#712#0" expanded="true" />
+            <element signature="e#781#782#0" expanded="true" />
+            <element signature="e#825#826#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/services/PublicServiceDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="59" selection-start="1983" selection-end="1983" vertical-scroll-proportion="0.0017793594" vertical-offset="730" max-vertical-offset="1343">
+          <folding />
         </state>
       </provider>
     </entry>
