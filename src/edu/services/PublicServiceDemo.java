@@ -75,5 +75,10 @@ public class PublicServiceDemo {
         System.out.println("infoRequest status set to " + infoRequest.getDocumentStatusString() +
                 " to " + informationResponsibleServant.getFullNameString());
 
+        //TODO:
+        System.out.println("infoRequest statuses history: " + ...);
+        System.out.println("infoRequest response doc text: " + infoRequest.getReactionDocument().getText);
+        //TODO: send by Email + send to Address
+
     }
 }
