@@ -2,6 +2,7 @@ package edu.services.docs;
 
 import edu.clients.Requester;
 import edu.services.orgs.PublicService;
+import edu.services.servants.InformationResponsible;
 
 /**
  * Created by Lena on 05.03.14.
@@ -9,9 +10,11 @@ import edu.services.orgs.PublicService;
 public final class InformationRequest extends IncomingDocument {
     private String addressForReply;
     private String emailForReply;
+    private InformationResponsible informationResponsible;
 
     public InformationRequest(DocumentType documentType, Requester author, PublicService publicService) {
         super(documentType, author, publicService);
+        informationResponsible = (InformationResponsible) super.getIncomingDocResponsible();
     }
 
     public String getAddressForReply() {

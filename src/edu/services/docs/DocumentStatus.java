@@ -1,6 +1,7 @@
 package edu.services.docs;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.GregorianCalendar;
 
 /**
@@ -51,8 +52,29 @@ public class DocumentStatus {
         return documentStatusesHistory;
     }
 
+//    public String getDocumentStatusesHistoryString() {
+//        String result = "";
+//        String date = null;
+//        for (int i = 0; i < documentStatusesHistory.size(); i++) {
+//            GregorianCalendar calendar = documentStatusesDates.get(i);
+//            date = calendar.get(Calendar.HOUR) + ":" +
+//                    calendar.get(Calendar.MINUTE) + " " + calendar.get(Calendar.HOUR) + ", " +
+//                    calendar.get(Calendar.DAY_OF_MONTH) + "." +
+//                    calendar.get(Calendar.MONTH) + "." +
+//                    calendar.get(Calendar.YEAR);
+//            result = "Status " + documentStatusesHistory.get(i) +
+//                    " was assigned on " + date +
+//                    ". ";
+//        }
+//        return result;
+//    }
+
     private void addDocStatusesAndDatesHistory() {
         documentStatusesHistory.add(getCurrentDocumentStatus());
         documentStatusesDates.add(new GregorianCalendar());
+    }
+
+    public int getCurrentStatusIndex() {
+        return currentStatusIndex;
     }
 }

@@ -25,6 +25,15 @@ public class PublicServiceDemo {
         DocumentType infoRequestDocType = new DocumentType("Information_Request", "InfoReq_",infoRequestLifecycle);
         infoRequestLifecycle.setListInUse(true);
 
+        String[] outcomingDocLifecycleString = {"Created", "Sent"};
+        DocumentLifecycle outcomingDocLifecycle = new DocumentLifecycle(outcomingDocLifecycleString);
+        outcomingDocLifecycle.setStartStatusIndex(0);
+        outcomingDocLifecycle.setFinalStatusIndex(1);
+        outcomingDocLifecycle.setFinalized(true);
+
+        DocumentType outcomingDocType = new DocumentType("Outcoming_Document", "Out_",outcomingDocLifecycle);
+        outcomingDocLifecycle.setListInUse(true);
+
         Citizen citizen = new Citizen("Petrenko","Taras","Ivanovych");
         citizen.setEmailAddress("citizen@gmail.com");
         citizen.setOfficialId("1234567890");
@@ -50,7 +59,7 @@ public class PublicServiceDemo {
         if (infoRequest != null) {
             citizen.addRequest(infoRequest);
             System.out.println("citizen: " + citizen.getFullNameString());
-            System.out.println("publicService: " + publicService.getOrgName());
+            System.out.println("\npublicService: " + publicService.getOrgName() + "\n");
             System.out.println(infoRequest.toString());
         } else {
             System.out.println("infoRequest is NULL");
@@ -59,26 +68,26 @@ public class PublicServiceDemo {
         InformationResponsible informationResponsibleServant =
                 new InformationResponsible(publicService, "Karpenko","Petro","Ivanovych");
 
-        infoRequest.setIncomingDocResponsibleId(informationResponsibleServant.getPublicServantId());
+        infoRequest.setIncomingDocResponsible(informationResponsibleServant);
         infoRequest.setNextDocumentStatus();
-        System.out.println("infoRequest status set to " + infoRequest.getDocumentStatusString() +
+        System.out.println("\ninfoRequest status set to " + infoRequest.getDocumentStatusString() +
             " to " + informationResponsibleServant.getFullNameString());
 
+
         OutcomingDocument outcomingDocument =
-                new OutcomingDocument(informationResponsibleServant, publicService);
+                new OutcomingDocument(outcomingDocType, informationResponsibleServant, publicService);
         outcomingDocument.setText(informationResponsibleServant.getInformationForReply());
 
-        infoRequest.setReactionDocumentId(outcomingDocument.getDocumentId());
-        outcomingDocument.setInitiatingDocId(infoRequest.getDocumentId());
+        infoRequest.setReactionDocument(outcomingDocument);
+        outcomingDocument.setInitiatingDocument(infoRequest);
         outcomingDocument.publishToRequester(citizen);
+        outcomingDocument.setNextDocumentStatus();
         infoRequest.setNextDocumentStatus();
-        System.out.println("infoRequest status set to " + infoRequest.getDocumentStatusString() +
+        System.out.println("\ninfoRequest status set to " + infoRequest.getDocumentStatusString() +
                 " to " + informationResponsibleServant.getFullNameString());
-
-        //TODO:
-        System.out.println("infoRequest statuses history: " + ...);
-        System.out.println("infoRequest response doc text: " + infoRequest.getReactionDocument().getText);
+        System.out.println("\ninfoRequest statuses history: " + infoRequest.getStatusesHistory());
+        System.out.println("\ncitizen got the next responses:\n   " + citizen.getResponsesString());
         //TODO: send by Email + send to Address
-
+        //TODO: show infoRequest.resultingDoc and outcomingDoc.initiating doc
     }
 }

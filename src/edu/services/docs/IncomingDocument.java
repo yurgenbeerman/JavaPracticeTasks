@@ -3,14 +3,16 @@ package edu.services.docs;
 import edu.clients.Requester;
 import edu.services.orgs.PublicService;
 import edu.services.servants.InformationResponsible;
+import edu.services.servants.PublicServant;
 
 /**
  * Created by yurii.pyvovarenko on 3/4/14.
  */
 public class IncomingDocument extends OrganizationDocument {
-    private long incomingDocResponsibleId;
     private long reactionDocumentId;
-    private InformationResponsible informationResponsible;
+    private OrganizationDocument reactionDocument;
+    private long incomingDocResponsibleId;
+    private PublicServant incomingDocResponsible;
 
     public IncomingDocument(DocumentType documentType, Requester author, PublicService publicService) {
         super(documentType, author, publicService);
@@ -20,22 +22,33 @@ public class IncomingDocument extends OrganizationDocument {
         return incomingDocResponsibleId;
     }
 
-    public String getIncomingDocResponsibleName() {
-        return informationResponsible.getFullNameString();
+    public PublicServant getIncomingDocResponsible() {
+        return incomingDocResponsible;
     }
 
-    public void setIncomingDocResponsibleId(long incomingDocResponsibleId) {
-        this.incomingDocResponsibleId = incomingDocResponsibleId;
+    public String getIncomingDocResponsibleName() {
+        return incomingDocResponsible.getFullNameString();
+    }
+
+    public void setIncomingDocResponsible(PublicServant incomingDocResponsible) {
+        if (! isFinalized) {
+            this.incomingDocResponsible = incomingDocResponsible;
+            this.incomingDocResponsibleId = incomingDocResponsible.getPublicServantId();
+        }
     }
 
     public long getReactionDocumentId() {
         return reactionDocumentId;
     }
 
-    public void setReactionDocumentId(long reactionDocumentId) {
-        this.reactionDocumentId = reactionDocumentId;
+    public OrganizationDocument getReactionDocument() {
+        return reactionDocument;
     }
 
-
-
+    public void setReactionDocument(OrganizationDocument reactionDocument) {
+        if (! isFinalized) {
+            this.reactionDocument = reactionDocument;
+            reactionDocumentId = reactionDocument.getDocumentId();
+        }
+    }
 }

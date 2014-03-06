@@ -10,6 +10,7 @@ import edu.services.servants.PublicServant;
 
 public class OutcomingDocument extends OrganizationDocument {
     private long initiatingDocId;
+    private OrganizationDocument initiatingDocument;
     /* TODO implement reply sending via Email and Post */
     /*
     private Email outcomingDocSentEmail;
@@ -17,8 +18,8 @@ public class OutcomingDocument extends OrganizationDocument {
     private GregorianCalendar outcomingDocSentAddressDate;
     */
 
-    public OutcomingDocument(PublicServant informationResponsibleServant, PublicService publicService) {
-
+    public OutcomingDocument(DocumentType documentType, PublicServant publicServant, PublicService publicService) {
+        super(documentType, publicServant, publicService);
     }
 
     public void publishToRequester(Requester requester) {
@@ -30,9 +31,14 @@ public class OutcomingDocument extends OrganizationDocument {
         return initiatingDocId;
     }
 
-    public void setInitiatingDocId(long initiatingDocId) {
+    public OrganizationDocument getInitiatingDocument() {
+        return initiatingDocument;
+    }
+
+    public void setInitiatingDocument(OrganizationDocument initiatingDocument) {
         if (!isFinalized) {
-            this.initiatingDocId = initiatingDocId;
+            this.initiatingDocument = initiatingDocument;
+            this.initiatingDocId = initiatingDocument.getDocumentId();
         }
     }
 

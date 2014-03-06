@@ -10,7 +10,7 @@ import java.util.ArrayList;
  * Created by yurii.pyvovarenko on 3/4/14.
  */
 public class InformationResponsible extends PublicServant {
-    String informationForReply = "Reply of PublicServant.InformationResponsible.";
+    String informationForReply = "The plan of improvements for 2014 is next... Sincerely, InformationResponsible.";
 
     public InformationResponsible(PublicService organization, String surname, String name, String secondName) {
         super(organization, surname, name, secondName);

@@ -29,13 +29,13 @@ public class OrgDocStatusesHistory {
         String date = null;
         for (int i = 0; i < documentStatusesHistory.size(); i++) {
             GregorianCalendar calendar = documentStatusesDates.get(i);
-            date = calendar.get(Calendar.HOUR) + ":" +
+            date = calendar.get(Calendar.HOUR_OF_DAY) + ":" +
                     calendar.get(Calendar.MINUTE) + ", " +
                     calendar.get(Calendar.DAY_OF_MONTH) + "." +
                     calendar.get(Calendar.MONTH) + "." +
                     calendar.get(Calendar.YEAR);
-            result = "Status " + documentStatusesHistory.get(i) +
-                    "was assigned on " + date +
+            result = result + "Status '" + documentStatusesHistory.get(i) +
+                    "' was assigned at " + date +
                     ". ";
         }
         return result;

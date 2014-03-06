@@ -98,6 +98,14 @@ public class Citizen implements Requester, Emailable{
         return responses;
     }
 
+    public String getResponsesString() {
+        String result = "";
+        for (int i = 0; i < responses.size(); i++) {
+            result = result + responses.get(i);
+        }
+        return result;
+    }
+
     public void addResponse(OutcomingDocument response) {
         if (null == this.responses) {
             this.responses = new ArrayList<OutcomingDocument>();

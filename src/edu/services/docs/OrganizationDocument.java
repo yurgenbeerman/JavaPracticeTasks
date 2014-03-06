@@ -30,8 +30,7 @@ public class OrganizationDocument extends Text {
     }
 
     public OrganizationDocument(DocumentType documentType, Requester author, PublicService publicService) {
-        this.documentId = OrganizationDocument.lastDocumentId;
-        OrganizationDocument.lastDocumentId++;
+        this();
 
         this.author = author;
         this.orgId = publicService.getOrgId();
@@ -113,6 +112,11 @@ public class OrganizationDocument extends Text {
         return new OrgDocStatusesHistory(this);
     }
 
+//    public String getStatusesHistoryString() {
+//        OrgDocStatusesHistory history = new OrgDocStatusesHistory(this);
+//        return history.toString();
+//    }
+
     public long getOrgId() {
         return orgId;
     }
@@ -138,11 +142,11 @@ public class OrganizationDocument extends Text {
     }
 
     public String toString() {
-        String result = "infoRequest: " +
+        String result = documentType.getDocTypeName() + ": " +
         "\n    text: " + this.getText() +
         "\n    orgId: " + this.getOrgId() +
-        "\n    DocumentNumber: " + this.getDocumentNumber() +
-        "\n    DocumentStatusesHistory: " + this.getStatusesHistory().toString();
+        "\n    DocumentNumber: " + this.getDocumentNumber()
+        + "\n    DocumentStatusesHistory: " + this.getStatusesHistory().toString();
 
         return result;
     }
