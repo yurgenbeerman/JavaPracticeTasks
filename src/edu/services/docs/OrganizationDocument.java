@@ -159,4 +159,12 @@ public class OrganizationDocument extends Text {
 
         return result;
     }
+
+    public String getDocumentTypeName() {
+        return this.documentType.getDocTypeName();
+    }
+
+    public String getAuthorName() {
+        return this.getAuthor().getRequesterName();
+    }
 }

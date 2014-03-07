@@ -12,6 +12,7 @@ import edu.services.servants.InformationResponsible;
  * Implements main workfllow of the Public Service System
  */
 public class PublicServiceDemo {
+    static int statusNumber = 0;
     public static void main (String[] args) {
         System.out.println("------------- PublicServiceDemo ------------- ");
 
@@ -25,7 +26,7 @@ public class PublicServiceDemo {
         DocumentType infoRequestDocType = new DocumentType("Information_Request", "InfoReq_",infoRequestLifecycle);
         infoRequestLifecycle.setLifecycleInUse(true);
 
-        String[] outcomingDocLifecycleString = {"Created", "Passes_for_sending", "Sent"};
+        String[] outcomingDocLifecycleString = {"Created", "Passed_for_sending", "Sent"};
         DocumentLifecycle outcomingDocLifecycle = new DocumentLifecycle(outcomingDocLifecycleString);
         outcomingDocLifecycle.setStartStatusIndex(0);
         outcomingDocLifecycle.setFinalStatusIndex(2);
@@ -77,32 +78,42 @@ public class PublicServiceDemo {
             System.out.println("infoRequest is NULL");
         }
 
+        /* The user can modify the Request data until it isReceivedByPublicService */
+        infoRequest.setReceivedByPublicService(true);
         InformationResponsible informationResponsibleServant =
                 new InformationResponsible(publicService, "Karpenko","Petro","Ivanovych");
 
         infoRequest.setIncomingDocResponsible(informationResponsibleServant);
         infoRequest.setNextDocumentStatus();
-        System.out.println("\ninfoRequest status set to " + infoRequest.getDocumentStatusString() +
-            " to " + infoRequest.getIncomingDocResponsibleName());
+
+        printStatusAndAssignee(infoRequest, infoRequest.getIncomingDocResponsibleName());
 
 
         OutcomingDocument outcomingDocument =
                 new OutcomingDocument(outcomingDocType, informationResponsibleServant, publicService);
         outcomingDocType.setDocTypeInUse(true);
         outcomingDocument.setText(informationResponsibleServant.getInformationForReply());
-
         infoRequest.setReactionDocument(outcomingDocument);
         outcomingDocument.setInitiatingDocument(infoRequest);
+        outcomingDocument.setNextDocumentStatus();
+
         outcomingDocument.publishToRequester(citizen);
         outcomingDocument.setNextDocumentStatus();
         outcomingDocument.setFinalized(true);
         infoRequest.setNextDocumentStatus();
         infoRequest.setFinalized(true);
-        System.out.println("\ninfoRequest status set to " + infoRequest.getDocumentStatusString() +
-                " to " + informationResponsibleServant.getFullNameString());
+
+        printStatusAndAssignee(infoRequest, infoRequest.getAuthorName());
+
         System.out.println("\ninfoRequest statuses history: " + infoRequest.getStatusesHistoryString());
         System.out.println("\ncitizen got the next responses:\n   " + citizen.getResponsesString());
         //TODO: outcomingDocument.setNextDocumentStatus(); send by Email + send to Address
         //TODO: show infoRequest.resultingDoc and outcomingDoc.initiating doc
+    }
+
+    static void printStatusAndAssignee(OrganizationDocument orgDocument, String assigneeName) {
+        System.out.println("\n" + statusNumber + ". " + orgDocument.getDocumentTypeName() + " status set to " + orgDocument.getDocumentStatusString() +
+                " to " + assigneeName);
+        statusNumber++;
     }
 }

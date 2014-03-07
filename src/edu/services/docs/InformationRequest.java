@@ -22,7 +22,9 @@ public final class InformationRequest extends IncomingDocument {
     }
 
     public void setAddressForReply(String addressForReply) {
-        this.addressForReply = addressForReply;
+        if (! isReceivedByPublicService()) {
+            this.addressForReply = addressForReply;
+        }
     }
 
     public String getEmailForReply() {
@@ -30,6 +32,8 @@ public final class InformationRequest extends IncomingDocument {
     }
 
     public void setEmailForReply(String emailForReply) {
-        this.emailForReply = emailForReply;
+        if (! isReceivedByPublicService()) {
+            this.emailForReply = emailForReply;
+        }
     }
 }

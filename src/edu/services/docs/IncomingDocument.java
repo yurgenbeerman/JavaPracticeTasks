@@ -13,6 +13,7 @@ public class IncomingDocument extends OrganizationDocument {
     private OrganizationDocument reactionDocument;
     private long incomingDocResponsibleId;
     private PublicServant incomingDocResponsible;
+    private boolean isReceivedByPublicService;
 
     public IncomingDocument(DocumentType documentType, Requester author, PublicService publicService) {
         super(documentType, author, publicService);
@@ -49,6 +50,20 @@ public class IncomingDocument extends OrganizationDocument {
         if (! isFinalized) {
             this.reactionDocument = reactionDocument;
             reactionDocumentId = reactionDocument.getDocumentId();
+        }
+    }
+
+    public boolean isReceivedByPublicService() {
+        return isReceivedByPublicService;
+    }
+
+    public void setReceivedByPublicService(boolean isReceivedByPublicService) {
+        this.isReceivedByPublicService = isReceivedByPublicService;
+    }
+
+    public void setText(String text) {
+        if (! isReceivedByPublicService) {
+            super.setText(text);
         }
     }
 }

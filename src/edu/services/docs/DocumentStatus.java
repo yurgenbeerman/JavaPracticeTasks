@@ -62,8 +62,8 @@ public class DocumentStatus {
                     calendar.get(Calendar.DAY_OF_MONTH) + "." +
                     calendar.get(Calendar.MONTH) + "." +
                     calendar.get(Calendar.YEAR);
-            result = "Status " + documentStatusesHistory.get(i) +
-                    " was assigned on " + date +
+            result += "\n       Status '" + documentStatusesHistory.get(i) +
+                    "' was assigned on " + date +
                     ". ";
         }
         return result;
