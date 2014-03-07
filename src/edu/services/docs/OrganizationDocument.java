@@ -31,15 +31,11 @@ public class OrganizationDocument extends Text {
 
     public OrganizationDocument(DocumentType documentType, Requester author, PublicService publicService) {
         this();
-
         this.author = author;
         this.orgId = publicService.getOrgId();
         this.documentType = documentType;
-
         this.documentNumber = documentType.getDocTypeShortName() + this.documentId;
-
         documentStatus = new DocumentStatus(documentType.getDocumentLifecycle());
-
         //TODO assign other fields
     }
 
@@ -52,7 +48,9 @@ public class OrganizationDocument extends Text {
     }
 
     public void setDocumentName(String documentName) {
-        this.documentName = documentName;
+        if (! isFinalized) {
+            this.documentName = documentName;
+        }
     }
 
     public long getDocumentAuthorId() {
@@ -60,7 +58,9 @@ public class OrganizationDocument extends Text {
     }
 
     public void setDocumentAuthorId(long documentAuthorId) {
-        this.documentAuthorId = documentAuthorId;
+        if (! isFinalized) {
+            this.documentAuthorId = documentAuthorId;
+        }
     }
 
     public GregorianCalendar getDocumentCreationDate() {
@@ -68,7 +68,9 @@ public class OrganizationDocument extends Text {
     }
 
     public void setDocumentCreationDate(GregorianCalendar documentCreationDate) {
-        this.documentCreationDate = documentCreationDate;
+        if (! isFinalized) {
+            this.documentCreationDate = documentCreationDate;
+        }
     }
 
     public DocumentType getDocumentType() {
@@ -88,7 +90,9 @@ public class OrganizationDocument extends Text {
     }
 
     public void setDocumentNumber(String documentNumber) {
-        this.documentNumber = documentNumber;
+        if (! isFinalized) {
+            this.documentNumber = documentNumber;
+        }
     }
 
     public DocumentStatus getDocumentStatus() {
@@ -101,11 +105,15 @@ public class OrganizationDocument extends Text {
 
 
     public void setNextDocumentStatus() {
-        this.documentStatus.setNextDocumentStatus();
+        if (! isFinalized) {
+            this.documentStatus.setNextDocumentStatus();
+        }
     }
 
     public void setPreviousDocumentStatus() {
-        this.documentStatus.setPreviousDocumentStatus();
+        if (! isFinalized) {
+            this.documentStatus.setPreviousDocumentStatus();
+        }
     }
 
 //    public OrgDocStatusesHistory getStatusesHistory() {
@@ -121,7 +129,9 @@ public class OrganizationDocument extends Text {
     }
 
     public void setOrgId(long orgId) {
-        this.orgId = orgId;
+        if (! isFinalized) {
+            this.orgId = orgId;
+        }
     }
 
     public Requester getAuthor() {
@@ -129,7 +139,9 @@ public class OrganizationDocument extends Text {
     }
 
     public void setAuthor(Requester author) {
-        this.author = author;
+        if (! isFinalized) {
+            this.author = author;
+        }
     }
 
     public String getText() {
@@ -137,7 +149,9 @@ public class OrganizationDocument extends Text {
     }
 
     public void setText(String text) {
-        this.text = text;
+        if (! isFinalized) {
+            this.text = text;
+        }
     }
 
     public String toString() {
