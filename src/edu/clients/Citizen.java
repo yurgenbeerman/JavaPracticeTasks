@@ -9,8 +9,11 @@ import java.util.ArrayList;
 
 /**
  * Created by yurii.pyvovarenko on 3/4/14.
+ *
+ * Citizen objects contain information on Requests (IncomingDocs of Organization) and Responses (OutcomingDocs of Organization).
+ * Also it has data to approve to Organization, that this is real citizen (officialId field = INN).
  */
-public class Citizen implements Requester, Emailable{
+public class Citizen implements Requester, Emailable {
 
     private static long lastCitizenId;
 

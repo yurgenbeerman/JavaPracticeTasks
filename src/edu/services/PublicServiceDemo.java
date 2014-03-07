@@ -8,6 +8,8 @@ import edu.services.servants.InformationResponsible;
 
 /**
  * Created by yurii.pyvovarenko on 05.03.14.
+ *
+ * Implements main workfllow of the Public Service System
  */
 public class PublicServiceDemo {
     public static void main (String[] args) {
@@ -23,10 +25,10 @@ public class PublicServiceDemo {
         DocumentType infoRequestDocType = new DocumentType("Information_Request", "InfoReq_",infoRequestLifecycle);
         infoRequestLifecycle.setLifecycleInUse(true);
 
-        String[] outcomingDocLifecycleString = {"Created", "Sent"};
+        String[] outcomingDocLifecycleString = {"Created", "Passes_for_sending", "Sent"};
         DocumentLifecycle outcomingDocLifecycle = new DocumentLifecycle(outcomingDocLifecycleString);
         outcomingDocLifecycle.setStartStatusIndex(0);
-        outcomingDocLifecycle.setFinalStatusIndex(1);
+        outcomingDocLifecycle.setFinalStatusIndex(2);
         outcomingDocLifecycle.setFinalized(true);
 
         DocumentType outcomingDocType = new DocumentType("Outcoming_Document", "Out_",outcomingDocLifecycle);
@@ -48,8 +50,20 @@ public class PublicServiceDemo {
         PublicService publicService = new PublicService("Improvements service");
         /* INITIALIZATION end */
 
+        /* Assume a user (Citizen wants to create s Request */
+        if (( citizen.getRequesterOfficialId() != null) && (citizen.getRequesterOfficialId() != "")) {
+            if ( citizen.getRequesterOfficialId().length() != 10 ) {
+                System.out.println("RequesterOfficialId is wrong: " + citizen.getRequesterOfficialId() + ". We can not allow to create a request. You still may email to us.");
+                System.exit(2);
+            }
+        } else {
+            System.out.println("There's no RequesterOfficialId: " + citizen.getRequesterOfficialId() + ". We can not allow to create a request. You still may email to us.");
+            System.exit(1);
+        }
+
         InformationRequest infoRequest =
                 new InformationRequest(infoRequestDocType, citizen, publicService);
+        infoRequestDocType.setDocTypeInUse(true);
         infoRequest.setText("What parks and streets improvements are planned for 2014 in Kyiv?");
         infoRequest.setAddressForReply(citizen.getAddressString());
         infoRequest.setEmailForReply(citizen.getEmailAddress());
@@ -69,23 +83,26 @@ public class PublicServiceDemo {
         infoRequest.setIncomingDocResponsible(informationResponsibleServant);
         infoRequest.setNextDocumentStatus();
         System.out.println("\ninfoRequest status set to " + infoRequest.getDocumentStatusString() +
-            " to " + informationResponsibleServant.getFullNameString());
+            " to " + infoRequest.getIncomingDocResponsibleName());
 
 
         OutcomingDocument outcomingDocument =
                 new OutcomingDocument(outcomingDocType, informationResponsibleServant, publicService);
+        outcomingDocType.setDocTypeInUse(true);
         outcomingDocument.setText(informationResponsibleServant.getInformationForReply());
 
         infoRequest.setReactionDocument(outcomingDocument);
         outcomingDocument.setInitiatingDocument(infoRequest);
         outcomingDocument.publishToRequester(citizen);
         outcomingDocument.setNextDocumentStatus();
+        outcomingDocument.setFinalized(true);
         infoRequest.setNextDocumentStatus();
+        infoRequest.setFinalized(true);
         System.out.println("\ninfoRequest status set to " + infoRequest.getDocumentStatusString() +
                 " to " + informationResponsibleServant.getFullNameString());
         System.out.println("\ninfoRequest statuses history: " + infoRequest.getStatusesHistoryString());
         System.out.println("\ncitizen got the next responses:\n   " + citizen.getResponsesString());
-        //TODO: send by Email + send to Address
+        //TODO: outcomingDocument.setNextDocumentStatus(); send by Email + send to Address
         //TODO: show infoRequest.resultingDoc and outcomingDoc.initiating doc
     }
 }

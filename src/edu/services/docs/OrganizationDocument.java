@@ -116,10 +116,6 @@ public class OrganizationDocument extends Text {
         }
     }
 
-//    public OrgDocStatusesHistory getStatusesHistory() {
-//        return new OrgDocStatusesHistory(this);
-//    }
-
     public String getStatusesHistoryString() {
         return documentStatus.getDocumentStatusesHistoryString();
     }
@@ -156,10 +152,10 @@ public class OrganizationDocument extends Text {
 
     public String toString() {
         String result = documentType.getDocTypeName() + ": " +
-        "\n    text: " + this.getText() +
-        "\n    orgId: " + this.getOrgId() +
-        "\n    DocumentNumber: " + this.getDocumentNumber()
-        + "\n    DocumentStatusesHistory: " + this.getStatusesHistoryString();
+            "\n    text: " + this.getText() +
+            "\n    orgId: " + this.getOrgId() +
+            "\n    DocumentNumber: " + this.getDocumentNumber() +
+            "\n    DocumentStatusesHistory: " + this.getStatusesHistoryString();
 
         return result;
     }

@@ -5,6 +5,10 @@ import java.util.Collection;
 
 /**
  * Created by yurii.pyvovarenko on 06.03.14.
+ *
+ * With subclasses of this class you may implement even non-linear document lifecycles.
+ * Document lifecycle is a list of Statuses of a Document of some DocumentType with rules of rtanzition from one Status to another.
+ * It is no allowed to modify DocumentLifecycle object when it is in use or is Finalised.
  */
 public class DocumentLifecycle extends ArrayList<String> {
     private boolean isLifecycleInUse = false;
@@ -36,7 +40,9 @@ public class DocumentLifecycle extends ArrayList<String> {
     }
 
     public void setStartStatusIndex(int startStatusIndex) {
-        this.startStatusIndex = startStatusIndex;
+        if ((!isLifecycleInUse) && (!isFinalized)) {
+            this.startStatusIndex = startStatusIndex;
+        }
     }
 
     public int getFinalStatusIndex() {
@@ -44,7 +50,9 @@ public class DocumentLifecycle extends ArrayList<String> {
     }
 
     public void setFinalStatusIndex(int finalStatusIndex) {
-        this.finalStatusIndex = finalStatusIndex;
+        if ((!isLifecycleInUse) && (!isFinalized)) {
+            this.finalStatusIndex = finalStatusIndex;
+        }
     }
 
 

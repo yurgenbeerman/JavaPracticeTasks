@@ -1,13 +1,16 @@
 package edu.services.docs;
 
-import java.util.ArrayList;
-
 /**
  * Created by yurii.pyvovarenko on 06.03.14.
+ *
+ * It is no allowed to modify DocumentType object when it is in use or is Finalised.
+ * @param docTypeShortName if intended for creating documents numbers
  */
 public class DocumentType {
-    private String docTypeName; //INFORMATION_REQUEST, COMPLIANT, THANKS;
-    private String docTypeShortName; //"IN_IR_", "IN_C_", "IN_T_"
+    boolean isDocTypeInUse = false;
+    boolean isFinalized = false;
+    private String docTypeName;
+    private String docTypeShortName;
     private DocumentLifecycle documentLifecycle;
 
     public DocumentType(String docTypeName, String docTypeShortName, DocumentLifecycle documentLifecycle) {
@@ -21,7 +24,9 @@ public class DocumentType {
     }
 
     public void setDocTypeName(String docTypeName) {
-        this.docTypeName = docTypeName;
+        if ((!isDocTypeInUse) && (!isFinalized)) {
+            this.docTypeName = docTypeName;
+        }
     }
 
     public String getDocTypeShortName() {
@@ -29,7 +34,9 @@ public class DocumentType {
     }
 
     public void setDocTypeShortName(String docTypeShortName) {
-        this.docTypeShortName = docTypeShortName;
+        if ((!isDocTypeInUse) && (!isFinalized)) {
+            this.docTypeShortName = docTypeShortName;
+        }
     }
 
     public DocumentLifecycle getDocumentLifecycle() {
@@ -37,6 +44,24 @@ public class DocumentType {
     }
 
     public void setDocumentLifecycle(DocumentLifecycle documentLifecycle) {
-        this.documentLifecycle = documentLifecycle;
+        if ((!isDocTypeInUse) && (!isFinalized)) {
+            this.documentLifecycle = documentLifecycle;
+        }
+    }
+
+    public boolean isDocTypeInUse() {
+        return isDocTypeInUse;
+    }
+
+    public void setDocTypeInUse(boolean isDocTypeInUse) {
+        this.isDocTypeInUse = isDocTypeInUse;
+    }
+
+    public boolean isFinalized() {
+        return isFinalized;
+    }
+
+    public void setFinalized(boolean isFinalized) {
+        this.isFinalized = isFinalized;
     }
 }

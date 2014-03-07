@@ -15,12 +15,12 @@ public class DocumentStatus {
     private int previousStatusIndex;
 
 
-    public DocumentStatus(DocumentLifecycle statusesList) {
-        if (null != statusesList) {
-            documentLifecycle = statusesList;
-            documentLifecycle.setLifecycleInUse(true);
-            currentStatusIndex = documentLifecycle.getStartStatusIndex();
-            previousStatusIndex = documentLifecycle.getStartStatusIndex();
+    public DocumentStatus(DocumentLifecycle documentLifecycle) {
+        if (null != documentLifecycle) {
+            this.documentLifecycle = documentLifecycle;
+            this.documentLifecycle.setLifecycleInUse(true);
+            currentStatusIndex = this.documentLifecycle.getStartStatusIndex();
+            previousStatusIndex = this.documentLifecycle.getStartStatusIndex();
             documentStatusesHistory = new ArrayList<String>();
             documentStatusesDates = new ArrayList<GregorianCalendar>();
             addDocStatusesAndDatesHistory();
