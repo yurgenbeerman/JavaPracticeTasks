@@ -5,7 +5,9 @@ import java.util.Calendar;
 import java.util.GregorianCalendar;
 
 /**
- * Created by Lena on 06.03.14.
+ * Created by yurii.pyvovarenko on 06.03.14.
+ * OrgDocStatusesHistory is aimed to manage OrgDoc Statuses History, takes from OrgDoc.documentStatus.
+ * //TODO DECIDE IF THIS CLASS IS NEEDED
  */
 public class OrgDocStatusesHistory {
     private ArrayList<String> documentStatusesHistory;

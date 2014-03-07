@@ -3,7 +3,7 @@ package edu.services.docs;
 import java.util.GregorianCalendar;
 
 /**
- * Created by Lena on 05.03.14.
+ * Created by yurii.pyvovarenko on 05.03.14.
  */
 public final class Email extends Text {
     private String emailFromAddress;

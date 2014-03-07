@@ -6,10 +6,8 @@ import edu.services.docs.*;
 import edu.services.orgs.PublicService;
 import edu.services.servants.InformationResponsible;
 
-import java.util.GregorianCalendar;
-
 /**
- * Created by Lena on 05.03.14.
+ * Created by yurii.pyvovarenko on 05.03.14.
  */
 public class PublicServiceDemo {
     public static void main (String[] args) {
@@ -23,7 +21,7 @@ public class PublicServiceDemo {
         infoRequestLifecycle.setFinalized(true);
 
         DocumentType infoRequestDocType = new DocumentType("Information_Request", "InfoReq_",infoRequestLifecycle);
-        infoRequestLifecycle.setListInUse(true);
+        infoRequestLifecycle.setLifecycleInUse(true);
 
         String[] outcomingDocLifecycleString = {"Created", "Sent"};
         DocumentLifecycle outcomingDocLifecycle = new DocumentLifecycle(outcomingDocLifecycleString);
@@ -32,7 +30,7 @@ public class PublicServiceDemo {
         outcomingDocLifecycle.setFinalized(true);
 
         DocumentType outcomingDocType = new DocumentType("Outcoming_Document", "Out_",outcomingDocLifecycle);
-        outcomingDocLifecycle.setListInUse(true);
+        outcomingDocLifecycle.setLifecycleInUse(true);
 
         Citizen citizen = new Citizen("Petrenko","Taras","Ivanovych");
         citizen.setEmailAddress("citizen@gmail.com");
@@ -85,7 +83,7 @@ public class PublicServiceDemo {
         infoRequest.setNextDocumentStatus();
         System.out.println("\ninfoRequest status set to " + infoRequest.getDocumentStatusString() +
                 " to " + informationResponsibleServant.getFullNameString());
-        System.out.println("\ninfoRequest statuses history: " + infoRequest.getStatusesHistory());
+        System.out.println("\ninfoRequest statuses history: " + infoRequest.getStatusesHistoryString());
         System.out.println("\ncitizen got the next responses:\n   " + citizen.getResponsesString());
         //TODO: send by Email + send to Address
         //TODO: show infoRequest.resultingDoc and outcomingDoc.initiating doc

@@ -4,7 +4,7 @@ import edu.services.docs.IncomingDocument;
 import edu.services.docs.OutcomingDocument;
 
 /**
- * Created by Lena on 05.03.14.
+ * Created by yurii.pyvovarenko on 05.03.14.
  */
 public interface Requester {
     public String getRequesterOfficialId();

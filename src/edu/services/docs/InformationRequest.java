@@ -5,7 +5,7 @@ import edu.services.orgs.PublicService;
 import edu.services.servants.InformationResponsible;
 
 /**
- * Created by Lena on 05.03.14.
+ * Created by yurii.pyvovarenko on 05.03.14.
  */
 public final class InformationRequest extends IncomingDocument {
     private String addressForReply;

@@ -5,7 +5,7 @@ import java.util.Calendar;
 import java.util.GregorianCalendar;
 
 /**
- * Created by Lena on 06.03.14.
+ * Created by yurii.pyvovarenko on 06.03.14.
  */
 public class DocumentStatus {
     private DocumentLifecycle documentLifecycle;
@@ -18,7 +18,7 @@ public class DocumentStatus {
     public DocumentStatus(DocumentLifecycle statusesList) {
         if (null != statusesList) {
             documentLifecycle = statusesList;
-            documentLifecycle.setListInUse(true);
+            documentLifecycle.setLifecycleInUse(true);
             currentStatusIndex = documentLifecycle.getStartStatusIndex();
             previousStatusIndex = documentLifecycle.getStartStatusIndex();
             documentStatusesHistory = new ArrayList<String>();
@@ -52,22 +52,22 @@ public class DocumentStatus {
         return documentStatusesHistory;
     }
 
-//    public String getDocumentStatusesHistoryString() {
-//        String result = "";
-//        String date = null;
-//        for (int i = 0; i < documentStatusesHistory.size(); i++) {
-//            GregorianCalendar calendar = documentStatusesDates.get(i);
-//            date = calendar.get(Calendar.HOUR) + ":" +
-//                    calendar.get(Calendar.MINUTE) + " " + calendar.get(Calendar.HOUR) + ", " +
-//                    calendar.get(Calendar.DAY_OF_MONTH) + "." +
-//                    calendar.get(Calendar.MONTH) + "." +
-//                    calendar.get(Calendar.YEAR);
-//            result = "Status " + documentStatusesHistory.get(i) +
-//                    " was assigned on " + date +
-//                    ". ";
-//        }
-//        return result;
-//    }
+    public String getDocumentStatusesHistoryString() {
+        String result = "";
+        String date = null;
+        for (int i = 0; i < documentStatusesHistory.size(); i++) {
+            GregorianCalendar calendar = documentStatusesDates.get(i);
+            date = calendar.get(Calendar.HOUR_OF_DAY) + ":" +
+                    calendar.get(Calendar.MINUTE) + ", " +
+                    calendar.get(Calendar.DAY_OF_MONTH) + "." +
+                    calendar.get(Calendar.MONTH) + "." +
+                    calendar.get(Calendar.YEAR);
+            result = "Status " + documentStatusesHistory.get(i) +
+                    " was assigned on " + date +
+                    ". ";
+        }
+        return result;
+    }
 
     private void addDocStatusesAndDatesHistory() {
         documentStatusesHistory.add(getCurrentDocumentStatus());

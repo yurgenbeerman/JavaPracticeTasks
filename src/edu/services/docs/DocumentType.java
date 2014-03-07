@@ -3,7 +3,7 @@ package edu.services.docs;
 import java.util.ArrayList;
 
 /**
- * Created by Lena on 06.03.14.
+ * Created by yurii.pyvovarenko on 06.03.14.
  */
 public class DocumentType {
     private String docTypeName; //INFORMATION_REQUEST, COMPLIANT, THANKS;

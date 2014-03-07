@@ -1,7 +1,7 @@
 package edu.services.docs;
 
 /**
- * Created by Yurii Pyvovarenko on 05.03.14.
+ * Created by yurii.pyvovarenko on 05.03.14.
  */
 public abstract class Text {
     String text;

@@ -5,7 +5,7 @@ import edu.services.orgs.PublicService;
 import edu.services.servants.PublicServant;
 
 /**
- * Created by Yuri Pyvovarenko on 05.03.14.
+ * Created by yurii.pyvovarenko on 05.03.14.
  */
 
 public class OutcomingDocument extends OrganizationDocument {
